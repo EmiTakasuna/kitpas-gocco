@@ -1,0 +1,13 @@
+ /* Zen丸ゴシック */
+@mixin zen-maru {
+    font-family: "Zen Maru Gothic", serif;
+}
+
+/* m-plusゴシック */
+@mixin m-plus {
+    font-family: "M PLUS Rounded 1c", serif;
+}
+/*font-size 16px*/
+@mixin text-m {
+    font-size: 16px;
+}

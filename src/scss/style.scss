@@ -1,3 +1,6 @@
-@use "./base";
+@use "./base" as *;
+@use "./color" as *;
+@use "./font" as *;
+@use "./header";
 @use "./hamburger";
-
+@use "./page";

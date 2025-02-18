@@ -68,14 +68,21 @@ td {
     padding: 0;
     border: 0;
 }
+/* デザイン画面幅 * *********************************** */
+.wrapper {
+    max-width: 1294px;
+    margin: 0 auto;
+}
 
-/* breakpoint * *********************************** */
-$break-point: 767px;@mixin media-sp {
+/* スマホ切り替え * *********************************** */
+$break-point: 750px;
+@mixin media-sp {
     @media screen and (max-width: $break-point) {
     @content;
     }
+}
     
-    }
+
 /* Typography * *********************************** */
 html {
     // font-size: 62.5%;
@@ -167,21 +174,6 @@ img {
     display: block;
     }
 
-// @function sp($value) {
-// @return calc($value/428) * 100vw;
-// }
-
-// @function sp2($value) {
-// @return calc($value/375) * 100vw;
-// }
-
-$break-point: 767px;@mixin media-sp {
-@media screen and (max-width: $break-point) {
-@content;
-}
-}
-
-
 @mixin ina {
 & a {
 display: block;
@@ -224,11 +216,6 @@ display: none;
     @include media-sp {
     display: block;
     }
-}
-
-@mixin zen-maru {
-/* Zen丸ゴシック */
-font-family: "Zen Maru Gothic", serif;
 }
 
 @mixin border {

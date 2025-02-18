@@ -1,65 +1,171 @@
+@use "base";
+@use "color";
+@use "font";
+
+/* ハンバーガーメニュー * *********************************** */
+.wrapper__fixed {
+    position: fixed;//メニューとカートアイコンの親要素,位置を固定
+    top: 24px;
+    left: 0;
+    width: 100%;
+  }
+
 .wrapper__menu {
-    position: fixed;
-    top: 0;
-    right: 0;
     display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    max-width: 1294px;//menu-fixed内の最大横幅を設定
+    margin: 0 auto;
+    cursor: pointer;
 }
 
 .hamburger-menu {
     position: relative;
-    width: fit-content;//内側の要素に合わせた横幅
     display: flex;
-    height: 48px;
-    padding: 10px 20px;
     justify-content: center;
     align-items: center;
+    width: fit-content;//内側の要素に合わせた横幅
+    height: 48px;
     border-radius: 24px;
-    background: #007257;
-    box-shadow: 0px 8px 0px 0px #E6E2D5;
+    background: color.$green;;
+    box-shadow: 0px 8px 0px 0px color.$drop-shadow;
     margin-right: 20px;
+    padding: 10px 20px;
 
-    & .menu__heading {
-        color: #fff;
-        font-size: 16px;
+    &__heading {
+        color: color.$white;
+        @include font.text-m;
         font-weight: 700;
         margin-left: 28px;
     }
-        
 }
 
+.hamburger-menu-btn {
+    display: flex;
+    align-items: center;
+}
 
-.menu-btn span,
-.menu-btn span:before,
-.menu-btn span:after {
+label, input[type='checkbox'] {
+    cursor: pointer;
+}
+
+/*3本線*/
+.hamburger-menu-btn .hamburger-menu__lines,
+.hamburger-menu-btn .hamburger-menu__lines:before,
+.hamburger-menu-btn .hamburger-menu__lines:after {
     content: '';
     display: block;
     height: 3px;
     width: 20px;
     border-radius: 3px;
-    background-color: #ffffff;
+    background-color: color.$white;
     position: absolute;
     margin-right: 8px;
 }
-.menu-btn span:before {
+.hamburger-menu-btn .hamburger-menu__lines:before {
     bottom: 8px;
 }
-.menu-btn span:after {
+.hamburger-menu-btn .hamburger-menu__lines:after {
     top: 8px;
-
 }
 
-#menu-btn-check:checked ~ .menu-btn span {
+/*クリック時の3本線の動き*/
+#hamburger-menu-btn-check:checked ~ .hamburger-menu-btn .hamburger-menu__lines {
     background-color: rgba(255, 255, 255, 0);/*メニューオープン時は真ん中の線を透明にする*/
 }
-#menu-btn-check:checked ~ .menu-btn span::before {
+#hamburger-menu-btn-check:checked ~ .hamburger-menu-btn .hamburger-menu__lines::before {
     bottom: 0;
     transform: rotate(45deg);
 }
-#menu-btn-check:checked ~ .menu-btn span::after {
+#hamburger-menu-btn-check:checked ~ .hamburger-menu-btn .hamburger-menu__lines::after {
     top: 0;
     transform: rotate(-45deg);
 }
 
-#menu-btn-check {
+#hamburger-menu-btn-check {
     display: none;
+}
+
+#hamburger-menu-btn-check:checked ~ .hamburger-menu__content {
+    display: block;
+}
+
+/*メニューの中身*/
+.hamburger-menu__content {
+    position: absolute;
+    top: calc(58px + 48px);//メニューからの距離+メニューの高さ
+    right: 0;
+    display: none;
+    width: fit-content;//内側の要素に合わせた横幅
+    min-width: 211px;
+    height: fit-content;//内側の要素に合わせた高さ
+    border-radius: 10px;
+    background-color: color.$green;
+    box-shadow: 8px 8px 0px 0px color.$drop-shadow;
+    ul {
+        display: flex;
+        flex-direction: column;
+        padding: 40px 60px;
+        align-items: flex-start;
+        z-index: 80;
+        li {
+            list-style: none;
+            a {
+                display: block;
+                width: 100%;
+                @include font.m-plus;
+                @include font.text-m;
+                letter-spacing: 0.38px;//折り返しにならないよう再設定
+                font-weight: 800;
+                box-sizing: border-box;
+                color: color.$white;
+                text-decoration: none;
+                position: relative;
+            }
+        }
+        li:not(:last-of-type) {
+            margin-bottom: 30px;
+        }
+    }
+    &-circle {
+        position: absolute;
+        top: -37px;
+        right: 48px;
+        width: 14px;
+        height: 14px;
+        flex-shrink: 0;
+        border-radius: 50%;
+        background-color: color.$green;
+        box-shadow: 8px 8px 0px 0px color.$drop-shadow;
+
+    }
+    &-circle2 {
+        z-index: -1!important;
+        position: absolute;
+        top: -18px;
+        right: 48px;
+        width: 14px;
+        height: 36px;
+        flex-shrink: 0;
+        border-radius: 9999px;//長形円
+        background-color: color.$green;
+        box-shadow: 8px 8px 0px 0px color.$drop-shadow;
+    }
+}
+/*購入カートアイコン*/
+.shopping-cart {
+    position: relative;
+    background-color: color.$red;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    box-shadow: 0px 8px 0px 0px color.$drop-shadow;
+    & a img {
+        position: absolute;
+        top: 0;
+        right: 4px;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+    }
 }

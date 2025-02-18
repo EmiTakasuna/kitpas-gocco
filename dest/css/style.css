@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Reset margin, padding, border
 * *********************************** */
 html,
@@ -69,12 +70,18 @@ td {
   border: 0;
 }
 
-/* breakpoint * *********************************** */
+/* デザイン画面幅 * *********************************** */
+.wrapper {
+  max-width: 1294px;
+  margin: 0 auto;
+}
+
+/* スマホ切り替え * *********************************** */
 /* Typography * *********************************** */
 html {
   font-size: 0.694447vw;
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 750px) {
   html {
     font-size: 1.33333vw;
   }
@@ -82,13 +89,14 @@ html {
 
 body {
   font-size: 1.6rem;
+  font-family: "Zen Maru Gothic", serif;
   line-height: 1.7;
   letter-spacing: 0.05em;
   font-weight: 400;
   font-feature-settings: "palt";
   -webkit-font-smoothing: antialiased;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 750px) {
   body {
     font-size: 14px;
     font-size: 1.4rem;
@@ -166,7 +174,7 @@ br.sp {
   display: none;
   line-height: initial;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 750px) {
   br.sp {
     display: block;
     line-height: initial;
@@ -176,7 +184,7 @@ br.sp {
 br.pc {
   display: block;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 750px) {
   br.pc {
     display: none;
   }
@@ -185,7 +193,7 @@ br.pc {
 .show_pc {
   display: block;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 750px) {
   .show_pc {
     display: none !important;
   }
@@ -194,7 +202,7 @@ br.pc {
 .show_sp {
   display: none;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 750px) {
   .show_sp {
     display: block;
   }
@@ -212,14 +220,186 @@ br.pc {
   font-weight: bold;
 }
 
-.menu {
+/* Zen丸ゴシック */
+/* m-plusゴシック */
+/*font-size 16px*/
+/* ヘッダー * *********************************** */
+header {
+  margin: 22px 0 20px 0;
+}
+
+/* ハンバーガーメニュー * *********************************** */
+.wrapper__fixed {
+  position: fixed;
+  top: 24px;
+  left: 0;
+  width: 100%;
+}
+
+.wrapper__menu {
   display: flex;
-  height: 48px;
-  padding: 10px 20px;
+  justify-content: flex-end;
+  width: 100%;
+  max-width: 1294px;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.hamburger-menu {
+  position: relative;
+  display: flex;
   justify-content: center;
   align-items: center;
-  gap: 8px;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 48px;
   border-radius: 24px;
-  background: var(--Green, #007257);
+  background: #007257;
+  box-shadow: 0px 8px 0px 0px #E6E2D5;
+  margin-right: 20px;
+  padding: 10px 20px;
+}
+.hamburger-menu__heading {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  margin-left: 28px;
+}
+
+.hamburger-menu-btn {
+  display: flex;
+  align-items: center;
+}
+
+label, input[type=checkbox] {
+  cursor: pointer;
+}
+
+/*3本線*/
+.hamburger-menu-btn .hamburger-menu__lines,
+.hamburger-menu-btn .hamburger-menu__lines:before,
+.hamburger-menu-btn .hamburger-menu__lines:after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 20px;
+  border-radius: 3px;
+  background-color: #fff;
+  position: absolute;
+  margin-right: 8px;
+}
+
+.hamburger-menu-btn .hamburger-menu__lines:before {
+  bottom: 8px;
+}
+
+.hamburger-menu-btn .hamburger-menu__lines:after {
+  top: 8px;
+}
+
+/*クリック時の3本線の動き*/
+#hamburger-menu-btn-check:checked ~ .hamburger-menu-btn .hamburger-menu__lines {
+  background-color: rgba(255, 255, 255, 0); /*メニューオープン時は真ん中の線を透明にする*/
+}
+
+#hamburger-menu-btn-check:checked ~ .hamburger-menu-btn .hamburger-menu__lines::before {
+  bottom: 0;
+  transform: rotate(45deg);
+}
+
+#hamburger-menu-btn-check:checked ~ .hamburger-menu-btn .hamburger-menu__lines::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+#hamburger-menu-btn-check {
+  display: none;
+}
+
+#hamburger-menu-btn-check:checked ~ .hamburger-menu__content {
+  display: block;
+}
+
+/*メニューの中身*/
+.hamburger-menu__content {
+  position: absolute;
+  top: 106px;
+  right: 0;
+  display: none;
+  width: -moz-fit-content;
+  width: fit-content;
+  min-width: 211px;
+  height: -moz-fit-content;
+  height: fit-content;
+  border-radius: 10px;
+  background-color: #007257;
+  box-shadow: 8px 8px 0px 0px #E6E2D5;
+}
+.hamburger-menu__content ul {
+  display: flex;
+  flex-direction: column;
+  padding: 40px 60px;
+  align-items: flex-start;
+  z-index: 80;
+}
+.hamburger-menu__content ul li {
+  list-style: none;
+}
+.hamburger-menu__content ul li a {
+  display: block;
+  width: 100%;
+  font-family: "M PLUS Rounded 1c", serif;
+  font-size: 16px;
+  letter-spacing: 0.38px;
+  font-weight: 800;
+  box-sizing: border-box;
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+}
+.hamburger-menu__content ul li:not(:last-of-type) {
+  margin-bottom: 30px;
+}
+.hamburger-menu__content-circle {
+  position: absolute;
+  top: -37px;
+  right: 48px;
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background-color: #007257;
+  box-shadow: 8px 8px 0px 0px #E6E2D5;
+}
+.hamburger-menu__content-circle2 {
+  z-index: -1 !important;
+  position: absolute;
+  top: -18px;
+  right: 48px;
+  width: 14px;
+  height: 36px;
+  flex-shrink: 0;
+  border-radius: 9999px;
+  background-color: #007257;
+  box-shadow: 8px 8px 0px 0px #E6E2D5;
+}
+
+/*購入カートアイコン*/
+.shopping-cart {
+  position: relative;
+  background-color: #E63500;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
   box-shadow: 0px 8px 0px 0px #E6E2D5;
 }
+.shopping-cart a img {
+  position: absolute;
+  top: 0;
+  right: 4px;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+
+/* コンテンツのスタイル * *********************************** */

@@ -21,7 +21,7 @@ gulp.task('sass', function () {
     // ベンダープレフィックスを自動付与する
     .pipe(postcss([autoprefixer()]))
     // cssフォルダー以下に保存
-    .pipe(gulp.dest('dest/assets/css/'));
+    .pipe(gulp.dest('dest/css/'));
 });
 
 // ejsファイルの書き出しタスクを作成する

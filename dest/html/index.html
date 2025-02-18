@@ -22,7 +22,7 @@
     <meta http-equiv="x-ua-compatible" content="IE=edge">
 
     <!--サイトアイコン-->
-    <link rel="icon" href="画像URL" sizes="16x16" type="image/png"/>
+    <!-- <link rel="icon" href="画像URL" sizes="16x16" type="image/png"/> -->
 
     <!--電話番号,メールアドレスのリンク変換防止-->
     <meta name="format-detection" content="email=no,telephone=no,address=no"/>
@@ -32,40 +32,64 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;800&display=swap" rel="stylesheet">
 
     <!--css-->
-    <link rel="stylesheet" href="../assets/css/style.css" type="text/css">
+    <link rel="stylesheet" href="../css/style.css" type="text/css">
 
 </head>
 <body>
     <header>
-      <h1>
-        <a href="#top">
-          <img src="../assets/images/logo.svg" alt="かんたんプリントでアートをもっと自由に「キットパスゴッコ」">
-        </a>
-      </h1>
 
-      <div class="wrapper__menu">
-        <!--ハンバーガーメニュー-->
-        <div class="hamburger-menu">
 
-          <input type="checkbox" id="menu-btn-check">
-          <label for="menu-btn-check" class="menu-btn">
-            <span></span>
-          </label>
-          <span class="menu__heading">メニュー</span>
-          <nav>
-            <ul>
-              <li></li>
-              <li></li>
-              <li></li>
-            </ul>
-          </nav>
-
-        <div>
-          <a href="">
-            <img src="../assets/images/menu-shop.svg" alt="商品一覧へリンクするカートアイコン">
+      <div class="wrapper">
+        <!--ロゴ-->
+        <h1>
+          <a href="#top">
+            <img src="../assets/images/logo.svg" alt="かんたんプリントでアートをもっと自由に「キットパスゴッコ」">
           </a>
+        </h1>
+      </div>
+
+      <div class="wrapper__fixed">
+        <div class="wrapper__menu">
+          <!--ハンバーガーメニュー-->
+          <div class="hamburger-menu">
+
+            <input type="checkbox" id="hamburger-menu-btn-check">
+            <label for="hamburger-menu-btn-check" class="hamburger-menu-btn">
+              <span class="hamburger-menu__lines"></span>
+              <span class="hamburger-menu__heading">メニュー</span>
+            </label>
+            <nav class="hamburger-menu__content">
+              <div class="hamburger-menu__content-circle"></div>
+              <div class="hamburger-menu__content-circle2"></div>
+              <ul>
+                <li>
+                  <a href="#">concept</a>
+                </li>
+                <li>
+                  <a href="#">features</a>
+                </li>
+                <li>
+                  <a href="#">how to use</a>
+                </li>
+                <li>
+                  <a href="#">voices</a>
+                </li>
+                <li>
+                  <a href="#">faq</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+
+          <!--購入カート-->
+          <div class="shopping-cart">
+            <a href="">
+              <img src="../assets/images/shopping-cart.svg" alt="商品一覧へリンクするカートアイコン">
+            </a>
+          </div>
         </div>
       </div>
 
