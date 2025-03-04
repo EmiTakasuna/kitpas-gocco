@@ -9,7 +9,7 @@ header {
     padding: 1.3vw 0 1.3vw 0;
     z-index: 999;
     @include base.media-sp {
-        padding: 5.4vw 0 5.4vw 0;
+        padding: 5vw 0 5vw 0;
     }
     .header__logo {
         width: percentage(math.div(256, 1512));//デザイン還付のサイズ÷フレームサイズ
