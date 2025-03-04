@@ -27,10 +27,12 @@ a.jump_point {
 .sink:hover {
     transform: translateY(0.5vw);
     box-shadow: 0 0 0 0 color.$drop-shadow;
-    opacity: 0.9;
     @include base.media-sp {
         transform: none;
         box-shadow: 1.4vw 1.4vw 0 0 color.$drop-shadow;
+    }
+    a {
+        opacity: 1!important;
     }
 }
 
@@ -45,32 +47,6 @@ body {
     border-radius: 0 0 1.3vw 1.3vw;
     @include base.media-sp {
         padding-bottom: 20.9vw;
-    }
-}
-.bg-circle {
-    background: color.$white;
-    border-top-left-radius: 50%;
-    border-top-right-radius: 50%;
-    border-bottom-left-radius: 50%;
-    border-bottom-right-radius: 50%;
-    padding-top: 10vw;
-    padding-bottom: 10vw;
-}
-.bg-circle-beige {
-    background: color.$beige;
-    border-top-left-radius: 50%;
-    border-top-right-radius: 50%;
-    border-bottom-left-radius: 50%;
-    border-bottom-right-radius: 50%;
-    margin-left: -26vw;
-    margin-right: -26vw;
-    padding-left: 100px;
-    padding-right: 100px;
-    padding-top: 0;
-    padding-bottom: 0.7vw;
-    @include base.media-sp {
-        margin-left: -130vw;
-        margin-right: -130vw;
     }
 }
 .fv {
@@ -431,8 +407,73 @@ body {
         }
 }
 
+/* features~shopping背景の楕円 * *********************************** */
+.bg-circle-beige {
+    // background: color.$beige;
+    // border-top-left-radius: 50%;
+    // border-top-right-radius: 50%;
+    // border-bottom-left-radius: 50%;
+    // border-bottom-right-radius: 50%;
+    // margin-left: -26vw;
+    // margin-right: -26vw;
+    // padding-left: 100px;
+    // padding-right: 100px;
+    // padding-top: 0;
+    // padding-bottom: 0.7vw;
+    background: color.$beige;
+    border-top-left-radius: 1000px 500px;
+    border-top-right-radius: 1000px 500px;
+    border-bottom-left-radius: 1000px 500px;
+    border-bottom-right-radius: 1000px 500px;
+    padding-left: 100px;
+    padding-right: 100px;
+    margin-left: -3vw;
+    margin-right: -3vw;
+    @include base.media-sp {
+        border-top-left-radius: 1000px 300px;
+        border-top-right-radius: 1000px 300px;
+        border-bottom-left-radius: 1000px 300px;
+        border-bottom-right-radius: 1000px 300px;
+        padding-left: 4.6vw;
+        padding-right: 4.6vw;
+        margin-bottom: 15.4vw;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+.bg-circle {
+    // width: 100%;
+    // background: color.$white;
+    // border-top-left-radius: 50%;
+    // border-top-right-radius: 50%;
+    // border-bottom-left-radius: 50%;
+    // border-bottom-right-radius: 50%;
+    // padding-top: 10vw;
+    // padding-bottom: 10vw;
+    background: color.$white;
+    border-top-left-radius: 1000px 500px;
+    border-top-right-radius: 1000px 500px;
+    border-bottom-left-radius: 1000px 500px;
+    border-bottom-right-radius: 1000px 500px;
+    margin-left: -100px;
+    margin-right: -100px;
+    padding-top: 10vw;
+    padding-bottom: 10vw;
+    padding-left: 100px;
+    padding-right: 100px;
+    @include base.media-sp {
+        border-top-left-radius: 1000px 300px;
+        border-top-right-radius: 1000px 300px;
+        border-bottom-left-radius: 1000px 300px;
+        border-bottom-right-radius: 1000px 300px;
+    }
+}
+
 /* features * *********************************** */
 .features {
+    @include base.media-sp {
+        margin: 20.5vw auto;
+    }
     &__heading {
         position: relative;
         width: fit-content;
@@ -451,11 +492,11 @@ body {
 
     }
     &__container {
-        margin: 0 30vw;//背景でマイナスマージンを設定しているので、調整
-        @include base.media-sp {
-            margin-left: 115vw;
-            margin-right: 115vw;
-        }
+        margin: 0 3vw;//背景でマイナスマージンを設定しているので、調整
+        // @include base.media-sp {
+        //     margin-left: 115vw;
+        //     margin-right: 115vw;
+        // }
         &--contents{
             position: relative;
             display: flex;
@@ -785,13 +826,13 @@ body {
     position: relative;
     z-index: 1;
     background-color: color.$white;
-    width: 63%;
+    // width: 63%;
     margin: 0 auto;
     padding: 0.8vw 0;
     border-radius: 0.7vw;
     box-shadow: 0.5vw 0.5vw 0 0 color.$drop-shadow;
     @include base.media-sp {
-        width: 30%;
+        // width: 30%;
         flex-direction: column;
         align-items: center;
     }
