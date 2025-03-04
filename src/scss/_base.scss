@@ -1,3 +1,5 @@
+
+
 /* Reset margin, padding, border
 * *********************************** */
 html,
@@ -68,25 +70,19 @@ td {
     padding: 0;
     border: 0;
 }
-/* デザイン画面幅 * *********************************** */
-.wrapper {
-    max-width: 1294px;
-    margin: 0 auto;
-}
-
 /* スマホ切り替え * *********************************** */
-$break-point: 750px;
+$break-point: 768px;
 @mixin media-sp {
     @media screen and (max-width: $break-point) {
     @content;
     }
 }
-    
 
 /* Typography * *********************************** */
 html {
     // font-size: 62.5%;
     font-size: 0.694447vw;
+    -webkit-text-size-adjust: 100%;
     @media only screen and (max-width: $break-point) {
         font-size: 1.33333vw;
     }
@@ -117,7 +113,10 @@ body {
 a,
 a:visited {
     color: inherit;
-    }
+}
+a:hover {
+    opacity: 0.7;
+}
 /* Layout * *********************************** */
 h1,
 h2,
@@ -149,6 +148,7 @@ main {
 
 a {
     text-decoration: none;
+    cursor: pointer;
     }
 
 table {
@@ -173,6 +173,17 @@ img {
     border-style: none;
     display: block;
     }
+
+label, input[type='checkbox'] {
+    cursor: pointer;
+}
+
+button {
+    cursor: pointer;
+}
+a  {
+    cursor: pointer;
+}
 
 @mixin ina {
 & a {
@@ -218,6 +229,10 @@ display: none;
     }
 }
 
+.no-wrap {
+    white-space: nowrap;
+}
+
 @mixin border {
 border: 1px solid #000;
 }
@@ -230,7 +245,31 @@ margin-top: 10px;
 margin-top: 50px;
 }
 
+.mb10 {
+    margin-bottom: 0.6vw;//10px
+}
+.pt5 {
+    padding-top: 5vw!important;
+    @include media-sp {
+        padding-top: 11.8vw!important;
+    }
+}
+
 .bold {
 font-weight: bold;
 }
 
+.text-left {
+    text-align: left;
+}
+
+/*display flex*/
+.justify-right {
+    justify-content: flex-end;//右揃え
+}
+
+.reverse_sp {
+    @include media-sp {
+        flex-direction: column-reverse!important;
+        }
+}

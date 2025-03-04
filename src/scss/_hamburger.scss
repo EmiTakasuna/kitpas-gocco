@@ -1,3 +1,4 @@
+@use "sass:math";
 @use "base";
 @use "color";
 @use "font";
@@ -5,7 +6,7 @@
 /* ハンバーガーメニュー * *********************************** */
 .wrapper__fixed {
     position: fixed;//メニューとカートアイコンの親要素,位置を固定
-    top: 24px;
+    top: 1.1vw;
     left: 0;
     width: 100%;
   }
@@ -14,7 +15,7 @@
     display: flex;
     justify-content: flex-end;
     width: 100%;
-    max-width: 1294px;//menu-fixed内の最大横幅を設定
+    max-width: percentage(math.div(1294, 1512));
     margin: 0 auto;
     cursor: pointer;
 }
@@ -25,18 +26,25 @@
     justify-content: center;
     align-items: center;
     width: fit-content;//内側の要素に合わせた横幅
-    height: 48px;
-    border-radius: 24px;
-    background: color.$green;;
-    box-shadow: 0px 8px 0px 0px color.$drop-shadow;
-    margin-right: 20px;
-    padding: 10px 20px;
-
+    height: 3.5vw;
+    border-radius: 9999px;//長形円
+    background: color.$green;
+    margin-right: 1.3vw;
+    padding: 1vh 1.3vw;
+    @include base.media-sp {
+        width: 48px;
+        height: 48px;
+    }
+    label, input[type=checkbox] {
+        @include base.media-sp {
+            padding: 7.8vw;
+        }
+    }
     &__heading {
         color: color.$white;
-        @include font.text-m;
+        font-size: 1.05vw;
         font-weight: 700;
-        margin-left: 28px;
+        margin-left: 1.85vw;
     }
 }
 
@@ -45,28 +53,36 @@
     align-items: center;
 }
 
-label, input[type='checkbox'] {
-    cursor: pointer;
-}
-
 /*3本線*/
 .hamburger-menu-btn .hamburger-menu__lines,
 .hamburger-menu-btn .hamburger-menu__lines:before,
 .hamburger-menu-btn .hamburger-menu__lines:after {
     content: '';
     display: block;
-    height: 3px;
-    width: 20px;
-    border-radius: 3px;
+    width: 1.1vw;
+    height: 0.2vw;
+    border-radius: 0.2vw;
     background-color: color.$white;
     position: absolute;
-    margin-right: 8px;
+    margin-right: 0.5vw;
+    @include base.media-sp {
+        width: 16px;
+        height: 2.4px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
 }
 .hamburger-menu-btn .hamburger-menu__lines:before {
-    bottom: 8px;
+    bottom: 0.5vw;
+    @include base.media-sp {
+        bottom: 6.5px;
+    }
 }
 .hamburger-menu-btn .hamburger-menu__lines:after {
-    top: 8px;
+    top: 0.5vw;
+    @include base.media-sp {
+        top: 6.5px;
+    }
 }
 
 /*クリック時の3本線の動き*/
@@ -76,10 +92,16 @@ label, input[type='checkbox'] {
 #hamburger-menu-btn-check:checked ~ .hamburger-menu-btn .hamburger-menu__lines::before {
     bottom: 0;
     transform: rotate(45deg);
+    @include base.media-sp {
+        left: 1px;
+    }
 }
 #hamburger-menu-btn-check:checked ~ .hamburger-menu-btn .hamburger-menu__lines::after {
     top: 0;
     transform: rotate(-45deg);
+    @include base.media-sp {
+        left: 1px;
+    }
 }
 
 #hamburger-menu-btn-check {
@@ -93,39 +115,67 @@ label, input[type='checkbox'] {
 /*メニューの中身*/
 .hamburger-menu__content {
     position: absolute;
-    top: calc(58px + 48px);//メニューからの距離+メニューの高さ
+    top: 7vw;//メニューからの距離+メニューの高さ
     right: 0;
     display: none;
     width: fit-content;//内側の要素に合わせた横幅
-    min-width: 211px;
+    min-width: percentage(math.div(211, 1512));
     height: fit-content;//内側の要素に合わせた高さ
-    border-radius: 10px;
+    border-radius: 0.6vw;
     background-color: color.$green;
-    box-shadow: 8px 8px 0px 0px color.$drop-shadow;
+        @include base.media-sp {
+            top: 30.1vw;
+            width: 43vw;
+        }
+
     ul {
         display: flex;
         flex-direction: column;
-        padding: 40px 60px;
+        padding: 3vw 4vw 3vw 3vw;
         align-items: flex-start;
         z-index: 80;
+        @include base.media-sp {
+            padding: 7.7vw;
+            padding-left: 4vw;
+        }
         li {
+            display: flex;
             list-style: none;
+            @include base.media-sp {
+                margin-left: 3.8vw;
+            }
             a {
                 display: block;
                 width: 100%;
                 @include font.m-plus;
-                @include font.text-m;
-                letter-spacing: 0.38px;//折り返しにならないよう再設定
+                font-size: 1.1vw;
+                letter-spacing: 0.025vw;//折り返しにならないよう再設定
                 font-weight: 800;
                 box-sizing: border-box;
                 color: color.$white;
                 text-decoration: none;
                 position: relative;
+                @include base.media-sp {
+                    font-size: 4.1vw;
+                }
+            }
+            img {
+                opacity: 0;
+                width: 1vw;
+                margin-right: 0.4vw;
+                @include base.media-sp {
+                    width: 15px;
+                    margin-right: 5px;
+                }
             }
         }
         li:not(:last-of-type) {
-            margin-bottom: 30px;
+            margin-bottom: 3vh;
         }
+        li:hover img {
+            opacity: 1;
+        }
+       
     }
     &-circle {
         position: absolute;
@@ -136,7 +186,9 @@ label, input[type='checkbox'] {
         flex-shrink: 0;
         border-radius: 50%;
         background-color: color.$green;
-        box-shadow: 8px 8px 0px 0px color.$drop-shadow;
+        @include base.media-sp {
+            right: 12px;
+        }
 
     }
     &-circle2 {
@@ -149,23 +201,11 @@ label, input[type='checkbox'] {
         flex-shrink: 0;
         border-radius: 9999px;//長形円
         background-color: color.$green;
-        box-shadow: 8px 8px 0px 0px color.$drop-shadow;
+        @include base.media-sp {
+            right: 12px;
+        }
     }
 }
-/*購入カートアイコン*/
-.shopping-cart {
-    position: relative;
-    background-color: color.$red;
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    box-shadow: 0px 8px 0px 0px color.$drop-shadow;
-    & a img {
-        position: absolute;
-        top: 0;
-        right: 4px;
-        bottom: 0;
-        left: 0;
-        margin: auto;
-    }
+.hamburger-menu__content ul li a:hover {
+    color: color.$yellow;
 }

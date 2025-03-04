@@ -1,4 +1,5 @@
- /* Zen丸ゴシック */
+
+/* Zen丸ゴシック */
 @mixin zen-maru {
     font-family: "Zen Maru Gothic", serif;
 }
@@ -7,7 +8,21 @@
 @mixin m-plus {
     font-family: "M PLUS Rounded 1c", serif;
 }
-/*font-size 16px*/
-@mixin text-m {
-    font-size: 16px;
+/*Baloo*/
+@mixin baloo {
+    font-family: "Baloo 2", serif;
+    font-optical-sizing: auto;
+}
+/*mochiy-pop*/
+@mixin mochiy-pop {
+    font-family: "Mochiy Pop One", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/*rocknroll*/
+@mixin rocknroll {
+    font-family: "RocknRoll One", serif;
+    font-weight: 400;
+    font-style: normal;
 }

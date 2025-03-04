@@ -1,0 +1,70 @@
+@use "sass:math";
+@use "base";
+@use "color";
+@use "font";
+
+
+.shopping .container {
+    max-width: 30vw;
+    width: 100%;
+    @include base.media-sp {
+      max-width: 80vw;
+    }
+  }
+  img {
+    height: auto;
+    width: 100%;
+  }
+  .thumbnail .slick-track {
+    transform: unset !important;
+  }
+
+  .thumbnail .slick-current {
+    opacity: 1;
+  }
+
+.slider {
+    margin-bottom: 2vw;
+    @include base.media-sp {
+      margin-bottom: 5.1vw;
+    }
+    .slick-img {
+        width: 100%;
+        height: auto;
+        img {
+            width: 30vw;
+            height: 23vw;
+            object-fit: cover; /* 縦横比維持しつつトリミング */
+            border-radius: 1.3vw;
+            @include base.media-sp {
+              width: 79.4vw;
+              height: 60.3vw;
+          }
+        }
+
+    }
+
+}
+.thumbnail {
+    width: 100%;
+    &-img {
+        opacity: 0.3;
+        transition: opacity .3s linear;
+        width: calc(100% / 5) !important;
+        img {
+            width: 5vw;
+            height: 5vw;
+            object-fit: cover; /* 縦横比維持しつつトリミング */
+            border-radius: 50%;
+            margin-bottom: 1.3vw;
+            @include base.media-sp {
+              width: 13vw;
+              height: 13vw;
+            }
+        }
+    }
+}
+/*現在表示されているものに枠線*/
+.thumbnail .slick-current img{
+    border:3px solid color.$yellow;
+}

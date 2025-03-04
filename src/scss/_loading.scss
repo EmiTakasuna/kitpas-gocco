@@ -1,0 +1,35 @@
+@use "sass:math";
+@use "base";
+@use "color";
+@use "font";
+
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    p {
+        @include font.baloo;
+        font-size: 1.9vw;
+        font-weight: 700;
+        margin-top: -2vw;
+        @include base.media-sp {
+            font-size: 5vw;
+        }
+
+    }
+    svg {
+        margin-right: 14px;
+        @include base.media-sp {
+            margin-right: 5px;
+            height:25px
+        }
+    }
+  }

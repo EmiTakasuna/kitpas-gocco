@@ -1,0 +1,319 @@
+@use "sass:math";
+@use "base";
+@use "color";
+@use "font";
+
+.fv {
+    &__animation {
+            position: absolute;
+            top: 12vh;
+            left: 50%;
+            transform: translateX(-50%);
+            @include base.media-sp {
+                top: 15vh;
+            }
+        &--flex {
+            display: flex;
+            flex-wrap: wrap;
+            width: 28vw;
+            @include base.media-sp {
+                width: 286px;
+            }
+            &--container {
+                position: relative;
+                width: 33%;
+                &--shape01 {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 7.4vw;
+                    @include base.media-sp {
+                        width: 81px;
+                        // width: 20.8vw;
+                    }
+                }
+                &--shape02 {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 8.1vw;
+                    @include base.media-sp {
+                        width: 89px;
+                        // width: 22.8vw;
+                    }
+                }
+                &--shape03 {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 8vw;
+                    @include base.media-sp {
+                        width: 88px;
+                        // width: 22.6vw;
+                    }
+                }
+                &--shape04 {
+                    position: absolute;
+                    top: -0.5vw;
+                    left: 6px;
+                    width: 6.1vw;
+                    @include base.media-sp {
+                        width: 67px;
+                        // width: 17.2vw;
+                    }
+                }
+                &--shape05 {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 8.2vw;
+                    @include base.media-sp {
+                        top: 10px;
+                        width: 89px;
+                        // width: 22.8vw;
+                    }
+                }
+                &--shape06 {
+                    position: absolute;
+                    top: 0.5vw;
+                    left: 0.5vw;
+                    width: 7.7vw;
+                    @include base.media-sp {
+                        top: 9px;
+                        left: 7px;
+                        width: 80px;
+                        // width: 20.5vw;
+                    }
+                }
+                &--shape07 {
+                    position: absolute;
+                    top: 0.7vw;
+                    left: 0.6vw;
+                    width: 5.2vw;
+                    @include base.media-sp {
+                        left: 8px;
+                        width: 57px;
+                        // width: 14.6vw;
+                    }
+                }
+                &--shape08 {
+                    position: absolute;
+                    top: 0;
+                    left: -0.5vw;
+                    width: 8.3vw;
+                    @include base.media-sp {
+                        left: -8px;
+                        width: 91px;
+                        // width: 23.3vw;
+                    }
+                }
+                &--shape09 {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 7.8vw;
+                    @include base.media-sp {
+                        width: 85px;
+                        // width: 21.8vw;
+                    }
+                }
+                /*イラスト*/
+                &--illust01 {
+                    position: absolute;
+                    top: 3vw;
+                    left: 1.1vw;
+                    z-index: 1;
+                    width: 4.9vw;
+                    @include base.media-sp {
+                        top: 35px;
+                        left: 12px;
+                        width: 54px;
+                        // width: 13.8vw;
+                    }
+                }
+                &--illust02 {
+                    position: absolute;
+                    top: 0.9vw;
+                    left: 2.3vw;
+                    z-index: 1;
+                    width: 3.1vw;
+                    @include base.media-sp {
+                        top: 10px;
+                        left: 25px;
+                        width: 34px;
+                        // width: 8.7vw;
+                    }
+                }
+                &--illust03 {
+                    position: absolute;
+                    top: 3vw;
+                    left: 2.7vw;
+                    z-index: 1;
+                    width: 4.7vw;
+                    @include base.media-sp {
+                        top: 29px;
+                        left: 33px;
+                        width: 51px;
+                        // width: 13.1vw;
+                    }
+                }
+                &--illust04 {
+                    position: absolute;
+                    top: 0.3vw;
+                    left: 1.5vw;
+                    z-index: 1;
+                    width: 3vw;
+                    @include base.media-sp {
+                        top: 11px;
+                        left: 22px;
+                        width: 31px;
+                        // width: 7.9vw;
+                    }
+                }
+                &--illust05 {
+                    position: absolute;
+                    top: 0.9vw;
+                    left: 2.3vw;
+                    z-index: 1;
+                    width: 3.1vw;
+                    @include base.media-sp {
+                        top: 16px;
+                        left: 21px;
+                        width: 41px;
+                        // width: 10.5vw;
+                    }
+                }
+                &--illust06 {
+                    position: absolute;
+                    top: 2.3vw;
+                    left: 3.4vw;
+                    z-index: 1;
+                    width: 2.1vw;
+                    @include base.media-sp {
+                        top: 28px;
+                        left: 36px;
+                        width: 24px;
+                        // width: 6.2vw;
+                    }
+                }
+                &--illust07 {
+                    position: absolute;
+                    top: 1.4vw;
+                    left: 2.5vw;
+                    z-index: 1;
+                    width: 1.2vw;
+                    @include base.media-sp {
+                        top: 13px;
+                        left: 30px;
+                        width: 13px;
+                        // width: 3.3vw;
+                    }
+                }
+                &--illust08 {
+                    position: absolute;
+                    top: 1.7vw;
+                    left: 1.2vw;
+                    z-index: 1;
+                    width: 5vw;
+                    @include base.media-sp {
+                        top: 19px;
+                        left: 11px;
+                        width: 55px;
+                        // width: 14.1vw;
+                    }
+                }
+                &--illust09 {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    z-index: 1;
+                    width: 7.6vw;
+                    @include base.media-sp {
+                        top: 3px;
+                        left: -1px;
+                        width: 83px;
+                        // width: 19.2vw;
+                    }
+                }
+            }
+            
+        }
+    }
+}
+.mt-2line01 {
+    margin-top: 10vw;
+    @include base.media-sp {
+        margin-top: 100px;
+    }
+}
+.mt-2line02 {
+    margin-top: 11vw;
+    @include base.media-sp {
+        margin-top: 108px;
+    }
+}
+.mt-2line03 {
+    margin-top: 11vw;
+    margin-left: 0.2vw;
+    @include base.media-sp {
+        margin-top: 111px;
+    }
+}
+.mt-3line01 {
+    margin-top: 9vw;
+    @include base.media-sp {
+        margin-top: 102px;
+        margin-left: 0.2vw;
+    }
+}
+.mt-3line02 {
+    margin-top: 9vw;
+    @include base.media-sp {
+        margin-top: 104px;
+    }
+}
+.mt-3line03 {
+    margin-top: 9vw;
+    @include base.media-sp {
+        margin-top: 102px;
+    }
+}
+
+/*スタンプ*/
+.stamp_img {
+	overflow: hidden;
+    max-width: 3vw;
+}
+
+/*カタカタ*/
+.katakata.on {
+    animation: katakata 1.5s;
+    @keyframes katakata {
+        0% {
+          transform: translateY(-2px) rotate(6deg);
+        }
+      
+        10% {
+            transform: translate(0) rotate(0deg);
+        }
+        20% {
+            transform: translate(0) rotate(-6deg);
+        }
+        30% {
+            transform: translateY(0px) rotate(0deg);
+        }
+        40% {
+            transform: translateY(-2px) rotate(6deg);
+        }
+        60% {
+            transform: translate(2px) rotate(-2deg);
+        }
+        80% {
+            transform: translateY(2px) rotate(0deg);
+        }
+        100% {
+            transform: translate(0) rotate(2deg);
+      }
+    }
+
+}

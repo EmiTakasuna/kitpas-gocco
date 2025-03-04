@@ -1,1 +1,1956 @@
+@use "sass:math";
+@use "base";
+@use "color";
+@use "font";
+
+/* デザイン画面幅 * *********************************** */
+.wrapper {
+    width: percentage(math.div(1294, 1512));
+    margin: 0 auto;
+    @include base.media-sp {
+        width: percentage(math.div(350, 390));
+    }
+}
+/* アンカーリンクの調整 * *********************************** */
+a.jump_point {
+    height: 1px;
+    display: block;
+    padding-top: 40px;
+    margin-top: -40px;
+    }
+
+/* ホバーで沈み込む(PCのみ) * *********************************** */
+
+.sink {
+    transition: .3s;
+}
+.sink:hover {
+    transform: translateY(0.5vw);
+    box-shadow: 0 0 0 0 color.$drop-shadow;
+    opacity: 0.9;
+    @include base.media-sp {
+        transform: none;
+        box-shadow: 1.4vw 1.4vw 0 0 color.$drop-shadow;
+    }
+}
+
 /* コンテンツのスタイル * *********************************** */
+body {
+    background-color: color.$light-beige;
+    color: color.$black;
+}
+.bg-white {
+    background-color: color.$white;
+    padding-bottom: 5.5vw;
+    border-radius: 0 0 1.3vw 1.3vw;
+    @include base.media-sp {
+        padding-bottom: 20.9vw;
+    }
+}
+.bg-circle {
+    background: color.$white;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    padding-top: 10vw;
+    padding-bottom: 10vw;
+}
+.bg-circle-beige {
+    background: color.$beige;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    margin-left: -26vw;
+    margin-right: -26vw;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 0;
+    padding-bottom: 0.7vw;
+    @include base.media-sp {
+        margin-left: -130vw;
+        margin-right: -130vw;
+    }
+}
+.fv {
+    position: relative;
+    z-index: 0;//ハンバーガーを最前面に出すため、headerとfvにz-indexを設定
+    &__illust {
+        position: absolute;
+        bottom: -4.4vw;
+        right: 20vw;
+        width: 7vw;
+        @include base.media-sp {
+            width: 16.2vw;
+            max-width: 85px;
+        }
+    }
+}
+.fv-mv {
+    object-fit: cover;
+    border-radius: 0.66vw;
+    width: 85%;
+    height: 75vh;
+    margin: 0 auto;
+    z-index: 0;
+    pointer-events : none;
+    @include base.media-sp {
+        height: 84vh;
+        width: percentage(math.div(350, 390));
+    }
+}
+.fv__text {
+    position: absolute;
+    bottom: -5vw;
+    left: 1vw;;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    span {
+        @include font.baloo;
+        font-size: 2.64vw;
+        color: color.$beige;
+        font-weight: 800;
+        writing-mode: vertical-lr;
+    }
+    img {
+        margin: 1.6vh auto;
+    }
+    &--img01 {
+        width: 3.3vw;
+        height: auto;
+    }
+    &--img02 {
+        width: 2.6vw;
+        height: auto;
+    }
+}
+
+.fv__text2 {
+    position: absolute;
+    bottom: -5vw;
+    right: 1vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    span {
+        @include font.baloo;
+        font-size: 2.64vw;
+        color: color.$beige;
+        font-weight: 800;
+        writing-mode: vertical-lr;
+    }
+    img {
+        margin: 1.6vh auto;
+    }
+    &--img03 {
+        width: 2.6vw;
+        height: auto;
+    }
+    &--img04 {
+        width: 3.3vw;
+        height: auto;
+    }
+}
+/*sp版*/
+.fv__text03 {
+    @include base.media-sp {
+        position: absolute;
+        bottom: -20.6vw;
+        left: -6%;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        width: 106%;
+        span {
+            @include font.baloo;
+            font-size: 10.3vw;
+            color: color.$beige;
+            font-weight: 800;
+            white-space: nowrap;
+        }
+        img {
+            margin: 1.6vh 2vw;
+        }
+        &--img01 {
+            width: 12.3vw;
+            height: auto;
+            transform: rotate(28deg);
+        }
+        &--img02 {
+            width: 9.8vw;
+            height: auto;
+        }
+    }
+}
+/* section * *********************************** */
+.section {
+    margin: 9.2vw auto;
+    text-align: center;
+    @include base.media-sp {
+        margin: 30.8vw auto;
+    }
+    &__heading {
+        position: relative;
+        margin-bottom: 2vw;
+        @include base.media-sp {
+            margin-bottom: 7vw;
+        }
+        h2 {
+            position: relative;
+            z-index: 2;
+            @include font.baloo;
+            font-size: 1.5vw;
+            font-weight: 800;
+            color: color.$white;
+            text-align: center;
+            @include base.media-sp {
+                font-size: 3.6vw;
+            }
+        }
+        img {
+            position: absolute;
+            z-index: 1;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            width: 20vw;
+            @include base.media-sp {
+                width: 48vw;
+            }
+        }
+    }
+    h3 {
+        position: relative;
+        z-index: 1;
+        display: block;
+        @include font.mochiy-pop;
+        font-size: 3.7vw;
+        line-height: 4.5vw;
+        letter-spacing: 0.1vw;
+        margin-bottom: 4.6vw;
+        @include base.media-sp {
+            font-size: 7.4vw;
+            line-height: 1.4;
+            margin-bottom: 10.3vw;
+        }
+        .text-small {
+            font-size: 3vw;
+            line-height: 4.5vw;
+            letter-spacing: 0.1vw;
+            @include base.media-sp {
+                font-size: 7.4vw;
+            }
+        }
+    }
+}
+
+/* concept * *********************************** */
+.concept {
+    position: relative;
+    margin: 9.2vw auto;
+    text-align: center;
+    @include base.media-sp {
+        margin: 30.8vw auto;
+    }
+    &__container {
+        position: relative;
+        margin: 3vw auto;
+        @include base.media-sp {
+            margin-top: 10.5vw;
+        }
+        p {
+            @include font.zen-maru;
+            font-size: 1.7vw;
+            font-weight: 500;
+            @include base.media-sp {
+                font-size: 3.6vw;
+                line-height: 2.5;
+            }
+        }
+        &--text {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 0.6vw;//10px
+            &--img01 {
+                width: 14.5vw;
+                margin-right: 0.8vw;
+                @include base.media-sp {
+                    width: 30.3vw;
+                    margin-right: 1.8vw;
+                }
+            }
+            &--img02 {
+                width: 6vw;
+                margin-left: 0.4vw;
+                @include base.media-sp {
+                    width: 12.3vw;
+                    margin-left: 0.8vw;
+                }
+            }
+            &--img03 {
+                width: 7.5vw;
+                margin-right: 1.4vw;
+                @include base.media-sp {
+                    width: 15.6vw;
+                    margin-right: 4.4vw;
+                }
+            }
+            &--img04 {
+                width: 5vw;
+                margin-left: 0.5vw;
+                margin-bottom: 1.4vw;
+                @include base.media-sp {
+                    position: absolute;
+                    bottom: 0.5vw;
+                    left: 50vw;
+                    width: 10.5vw;
+                    margin-left: 1vw;
+                }
+            }
+        }
+        &--text04 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 0.6vw;//10px
+            @include base.media-sp {
+                text-align: left;
+                margin-bottom: 0.6vw;
+                margin-left: -3vw;
+            }
+        }
+        &--text05 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 0.6vw;//10px
+            @include base.media-sp {
+                text-align: left;
+                margin-bottom: 2.6vw;//10px
+                margin-left: 6vw;
+            }
+        }
+        &--img05 {
+            position: absolute;
+            bottom: -10vw;
+            left: 23vw;
+            width: 7.5vw;
+            @include base.media-sp {
+                width: 16.2vw;
+                bottom: -31vw;
+                left: 6vw;
+            }
+        }
+    }
+}
+/* marquee * *********************************** */
+.marquee {
+    display: flex;
+    width: 100%;
+    height: 12.5vw;
+    overflow: hidden;
+    @include base.media-sp {
+        height: 21.5vw;
+    }
+    &__container {
+        display: flex;
+        align-items: center;
+        flex: 0 0 auto;
+        white-space: nowrap;
+        font-size: 9.2vw;
+        overflow: hidden;
+        @include base.media-sp {
+            font-size: 21vw;
+        }
+        span {
+            @include font.baloo;
+            font-weight: 700;
+            color: color.$white;
+        }
+        img {
+            margin: 0 1.3vw;
+            @include base.media-sp {
+                margin: 0 3.1vw;
+            }
+        }
+        &--marqueeimg01 {
+            width: 6vw;
+            @include base.media-sp {
+                width: 14vw;
+            }
+        }
+        &--marqueeimg02 {
+            width: 6vw;
+            @include base.media-sp {
+                width: 14vw;
+            }
+        }
+        &--marqueeimg03 {
+            width: 6vw;
+            @include base.media-sp {
+                width: 14vw;
+            }
+        }
+        &--marqueeimg04 {
+            width: 6vw;
+            @include base.media-sp {
+                width: 14vw;
+            }
+        }
+    }
+    &__container:nth-child(odd) {
+        animation: loop 50s -25s linear infinite;
+    }
+    
+    &__container:nth-child(even) {
+    animation: loop2 50s linear infinite;
+    }
+
+    
+    @keyframes loop {
+        0% {
+            transform: translateX(100%);
+        }
+        to {
+            transform: translateX(-100%);
+        }
+        }
+        
+        @keyframes loop2 {
+        0% {
+            transform: translateX(0);
+        }
+        to {
+            transform: translateX(-200%);
+        }
+        }
+}
+
+/* features * *********************************** */
+.features {
+    &__heading {
+        position: relative;
+        width: fit-content;
+        margin: 0 auto;
+        &--star {
+            position: absolute;
+            top: -1.7vw;
+            left: 87.1vw;
+            width: 3.75vw;
+            @include base.media-sp {
+                top: 8.7vw;
+                left: 196vw;
+                width: 6.4vw;
+            }
+        }
+
+    }
+    &__container {
+        margin: 0 30vw;//背景でマイナスマージンを設定しているので、調整
+        @include base.media-sp {
+            margin-left: 115vw;
+            margin-right: 115vw;
+        }
+        &--contents{
+            position: relative;
+            display: flex;
+            align-items: flex-start;
+            margin-top: 7.1vw;
+            @include base.media-sp {
+                flex-direction: column;
+                align-items: center;
+                margin-top: 31.3vw;
+            }
+            &--illust01 {
+                position: absolute;
+                bottom: -0.5vw;
+                left: 0;
+                width: 13.7vw;
+                @include base.media-sp {
+                    bottom: 47.5vw;
+                    left: -5.1vw;
+                    width: 26.4vw;
+                }
+            }
+            &--illust02 {
+                position: absolute;
+                top: 9.8vw;
+                right: -4.36vw;
+                width: 17vw;
+                @include base.media-sp {
+                    top: 25.8vw;
+                    right: -5.36vw;
+                    width: 32.8vw;
+                }
+            }
+            &--illust03 {
+                position: absolute;
+                bottom: -4.5vw;
+                left: 4.6vw;
+                width: 8.5vw;
+                @include base.media-sp {
+                    top: 32.8vw;
+                    left: -0.4vw;
+                    width: 16.4vw;
+                }
+            }
+            &--text {
+                text-align: left;
+                max-width: 31.5vw;
+                @include base.media-sp {
+                    max-width: percentage(math.div(350, 390));
+                }
+                h4 {
+                    position: relative;//前面配置のため
+                    z-index: 1;//前面配置のため
+                    @include font.mochiy-pop;
+                    font-size: 1.5vw;
+                    margin-bottom: 1.3vw;
+                    @include base.media-sp {
+                        font-size: 4.4vw;
+                        white-space: nowrap;
+                    }
+                }
+                p {
+                    position: relative;//前面配置のため
+                    z-index: 1;//前面配置のため
+                    @include base.media-sp {
+                        font-size: 3.1vw;
+                        width: 95%;
+                    }
+                }
+                
+            }
+            &--photo-left {
+                position: relative;
+                margin-left: 15.9vw;
+                margin-right: 4vw;
+                @include base.media-sp {
+                    margin-left: 32.9vw;
+                }
+                
+                &--img01 {
+                    width: 22vw;
+                    @include base.media-sp {
+                        width: 61.5vw;
+                    }
+                }
+                &--img03 {
+                    width: 22vw;
+                    @include base.media-sp {
+                        width: 63.6vw;
+                    }
+                }
+                &--balloon {
+                    position: absolute;
+                    top: -5.7vw;
+                    left: 2.6vw;
+                    @include base.media-sp {
+                        top: -15.7vw;
+                        left: 6.6vw;
+                    }
+                    &--img {
+                        width: 15vw;
+                        @include base.media-sp {
+                            width: 42vw;
+                        }
+                    }
+                    &--text01 {
+                        position: absolute;
+                        top: 0.7vw;
+                        left: 2vw;
+                        @include font.zen-maru;
+                        font-size: 1.3vw;
+                        font-weight: 700;
+                        color: color.$white;
+                        @include base.media-sp {
+                            top: 2.1vw;
+                            left: 6vw;
+                            font-size: 3.6vw;
+                        }
+                    }
+                    &--text03 {
+                        position: absolute;
+                        top: 0.7vw;
+                        left: 3.5vw;
+                        @include font.zen-maru;
+                        font-size: 1.3vw;
+                        font-weight: 700;
+                        color: color.$white;
+                        @include base.media-sp {
+                            top: 2.1vw;
+                            left: 10vw;
+                            font-size: 3.6vw;
+                        }
+                    }
+                }
+            }
+            
+            &--photo-right {
+                position: relative;
+                margin-right: 15.9vw;
+                margin-left: 4vw;
+                @include base.media-sp {
+                    margin-right: 27.9vw;
+                }
+                &--img02 {
+                    width: 22vw;
+                    @include base.media-sp {
+                        width: 64.6vw;
+                    }
+                }
+                &--balloon {
+                    position: absolute;
+                    top: -5.7vw;
+                    left: 2.6vw;
+                    @include base.media-sp {
+                        top: -15.7vw;
+                        left: 6.6vw;
+                    }
+                    &--img {
+                        width: 15vw;
+                        @include base.media-sp {
+                            width: 42vw;
+                        }
+                    }
+                    &--text02 {
+                        position: absolute;
+                        top: 0.7vw;
+                        left: 1.6vw;
+                        @include font.zen-maru;
+                        font-size: 1.3vw;
+                        font-weight: 700;
+                        color: color.$white;
+                        @include base.media-sp {
+                            top: 2.1vw;
+                            left: 5vw;
+                            font-size: 3.6vw;
+                        }
+                    }
+                }
+            }
+            &--text {
+                position: relative;
+                margin-top: 3.2vw;
+                @include base.media-sp {
+                    margin-top: 15.4vw;
+                    margin-left: 7vw;
+                }
+                span {
+                    z-index: 0;
+                    position: absolute;
+                    top: -3.3vw;
+                    left: -3.3vw;
+                    @include font.rocknroll;
+                    font-size: 9.2vw;
+                    line-height: 1;
+                    color: color.$light-beige;
+                    @include base.media-sp {
+                        top: -10.3vw;
+                        left: -7.3vw;
+                        font-size: 22.6vw;
+                    }
+
+                }
+            }
+        }
+        &--contents:first-of-type {
+            margin-top: 9vw;//1つ目のcontentsだけmargin-top変更
+            @include base.media-sp {
+                margin-top: 31.3vw;//1つ目のcontentsだけmargin-top変更
+            }
+        }
+        &--contents:not(:last-of-type) {
+            margin-bottom: 6.6vw;//最後のcontentsだけmargin-bottom変更
+        }
+    }
+
+}
+.overflow-hidden {
+    overflow: hidden;
+}
+
+/* how to use * *********************************** */
+.how-to-use {
+    position: relative;
+    &__container {
+        position: relative;//図形より前に描写
+        z-index: 1;//図形より前に描写
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 5.3vw;
+        @include base.media-sp {
+            flex-direction: column;
+        }
+        &--movie {
+            position: relative;
+            width: fit-content;
+            height: fit-content;
+            border-radius: 0.7vw;
+            background-color: color.$white;
+            box-shadow: 0.5vw 0.5vw 0 0 color.$drop-shadow;
+            padding: 4vw;
+            @include base.media-sp {
+                flex-direction: column;
+                height: fit-content;
+                padding: 7.4vw;
+            }
+            &--item {
+                width: 40vw;
+                height: 22vw;
+                @include base.media-sp {
+                    width:74.9vw;
+                    height: 42.1vw;
+                }
+            }
+            &--rectangle01 {
+                position: absolute;
+                bottom: 7vw;
+                left: 1.5vw;
+                width: 1.3vw;
+                height: 2.4vw;
+                background-color: color.$light-beige;
+            }
+            &--rectangle02 {
+                position: absolute;
+                bottom: 10vw;
+                right: 1.5vw;
+                width: 1.3vw;
+                height: 1.3vw;
+                background-color: color.$light-beige;
+            }
+        }
+        &--order {
+            margin-left: 4vw;
+            @include base.media-sp {
+                margin-left: 0;
+                margin-top: 10.3vw;
+                padding: 0  11.8vw;
+            }
+            &--container {
+                margin: 0 auto;
+                &--list {
+                    display: flex;
+                    align-items: center;
+                    &--number {
+                        width: 3.2vw;
+                        height: 3.2vw;
+                        border-radius: 100%;
+                        background-color: color.$green;
+                        margin-right: 0.7vw;
+                        @include base.media-sp {
+                            width: 9.8vw;
+                            height: 9.8vw;
+                            margin-right: 2.7vw
+                        }
+                        span {
+                            @include font.rocknroll;
+                            font-size: 1.5vw;
+                            color: color.$white;
+                            @include base.media-sp {
+                                font-size: 4.4vw;
+                            }
+                        }
+                    }
+                    p {
+                        @include font.zen-maru;
+                        font-size: 1vw;
+                        font-weight: 500;
+                        text-align: left;
+                        @include base.media-sp {
+                            font-size: 3.1vw;
+                            width: 57.5vw;
+                        }
+                    }
+                }
+                &--list:not(:last-of-type) {
+                    margin-bottom: 2vw;
+                    @include base.media-sp {
+                        margin-bottom: 5.1vw;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* shopping * *********************************** */
+.bg-white--rectangle {
+    position: relative;
+    z-index: 1;
+    background-color: color.$white;
+    width: 63%;
+    margin: 0 auto;
+    padding: 0.8vw 0;
+    border-radius: 0.7vw;
+    box-shadow: 0.5vw 0.5vw 0 0 color.$drop-shadow;
+    @include base.media-sp {
+        width: 30%;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+.shopping {
+    position: relative;
+    @include base.media-sp {
+        margin: 15.4vw auto;
+    }
+    &__logo {
+        width: 26.4vw;
+        margin-bottom: 1.3vw;
+        @include base.media-sp {
+            width: 67vw;
+            margin-bottom: 1.3vw;
+        }
+    }
+    &__container {
+        display: flex;
+        justify-content: center;
+        margin-top: 5.3vw;
+        @include base.media-sp {
+            flex-direction: column;
+            align-items: center;
+        }
+        &--detail {
+            text-align: left;
+            max-width: 30.6vw;
+            margin-left: 4vw;
+            @include base.media-sp {
+                max-width: none;
+                width: 79vw;
+                margin-top: 15.3vw;
+                margin-left: 0;
+            }
+            &--text {
+                @include font.zen-maru;
+                font-size: 0.9vw;
+                font-weight: 500;
+                margin-bottom: 2.6vw;
+                @include base.media-sp {
+                    font-size: 3.1vw;
+                }
+            }
+            &--price {
+                display: flex;
+                align-items: center;
+                &--yen-mark {
+                    @include font.m-plus ;
+                    font-size: 1.5vw;
+                    font-weight: 500;
+                    @include base.media-sp {
+                        font-size: 4.6vw;
+                    }
+                }
+                &--tax {
+                    @include font.zen-maru;
+                    font-size: 0.8vw;
+                    font-weight: 700;
+                    @include base.media-sp {
+                        font-size: 2.6vw;
+                    }
+                }
+                &--price {
+                    @include font.rocknroll;
+                    font-size: 2.4vw;
+                    @include base.media-sp {
+                        font-size: 7.2vw;
+                    }
+                }
+                &--patch {
+                    display: flex;
+                    align-items: center;
+                    background-color: color.$green;
+                    border-radius: 2.6vw;
+                    height: fit-content;
+                    padding: 0.7vw 1.3vw;
+                    margin-left: 1.3vw;
+                    @include base.media-sp {
+                        border-radius: 6.6vw;
+                        padding: 1.9vw 3.3vw;
+                        margin-left: 3.3vw;
+                    }
+                    img {
+                        width: 1.3vw;
+                        margin-right: 0.3vw;
+                        @include base.media-sp {
+                            width: 3.1vw;
+                            margin-right: 0.8vw;
+                        }
+                    }
+                    p {
+                        @include font.zen-maru;
+                        font-size: 0.8vw;
+                        font-weight: 700;
+                        color: color.$white;
+                        line-height: 1;
+                        @include base.media-sp {
+                            font-size: 2.6vw;
+                            font-weight: 500;
+                        }
+                    }
+                }
+            }
+            &--postage {
+                display: flex;
+                align-items: center;
+                margin-bottom: 3.3vw;
+                @include base.media-sp {
+                    margin-bottom: 7.7vw;
+                }
+                &--text {
+                    background-color: color.$beige;
+                    border-radius: 0.1vw;
+                    width: fit-content;
+                    height: fit-content;
+                    padding: 0.6vw 1.3vw;
+                    @include font.zen-maru;
+                    font-size: 0.8vw;
+                    font-weight: 700;
+                    line-height: 1;
+                    margin-right: 0.7vw;
+                    @include base.media-sp {
+                        padding: 1.3vw;
+                        font-size: 2.6vw;
+                        font-weight: 500;
+                        margin-right: 1.8vw;
+                    }
+                
+                }
+                &--price {
+                    @include font.rocknroll;
+                    font-size: 0.8vw;
+                    @include base.media-sp {
+                        font-size: 3.1vw;
+                    }
+                    span {
+                        @include font.m-plus;
+                        font-size: 0.8vw;
+                        font-weight: 500;
+                        @include base.media-sp {
+                            font-size: 3.1vw;
+                        }
+                    }
+                }
+            }
+            &--contents {
+                width: 100%;
+                border-collapse: collapse;
+                /*点線*/
+                background-size: 10px 2px;
+                background-image: linear-gradient(to right, color.$dark-beige 6px, transparent 6px);
+                background-repeat: repeat-x;
+                background-position: top;
+                padding-bottom: 5px;
+                @include font.zen-maru;
+                font-size: 0.8vw;
+                @include base.media-sp {
+                    font-size: 2.6vw;
+                    padding-bottom: 2.3vw;
+                    background-size: 10px 1px;
+                    background-image: linear-gradient(to right, color.$dark-beige 4px, transparent 6px);
+                }
+                .border-top {
+                    background-size: 10px 2px;
+                    background-image: linear-gradient(to right, color.$dark-beige 6px, transparent 6px);
+                    background-repeat: repeat-x;
+                    background-position: top;
+                    padding-bottom: 5px;
+                    @include base.media-sp {
+                        background-size: 10px 1px;
+                        background-image: linear-gradient(to right, color.$dark-beige 4px, transparent 6px);
+                    }
+                }
+                .heading {
+                    font-weight: 700;
+                    vertical-align: top;
+                    padding: 1vw 0;
+                    @include base.media-sp {
+                        padding: 2.3vw 0;
+                        padding-right: 6.7vw;
+                        white-space: nowrap;
+                    }
+                }
+                .name {
+                    font-weight: 500;
+                    padding: 1vw 0;
+                    @include base.media-sp {
+                        padding: 2.3vw 0;
+                        white-space: nowrap;
+                    }
+                }
+                .number {
+                    font-weight: 500;
+                    text-align: right;
+                }
+            }
+        }
+    }
+    &__button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 3.4vw;
+        margin-bottom: 7vw;
+        @include base.media-sp {
+            flex-direction: column;
+            margin-top: 7.9vw;
+            margin-bottom: 20.5vw;
+        }
+        &--btn01 {
+            background-color: color.$red;
+            border-radius: 4vw;
+            border: none;
+            box-shadow: 0.5vw 0.5vw 0 0 color.$drop-shadow;
+            // padding: 1.3vw 9.3vw;
+            margin-right: 4vw;
+            @include base.media-sp {
+                width: 88%;
+                border-radius: 15.4vw;
+                // padding: 5.1vw 18.5vw;
+                margin-right: 0;
+                margin-bottom: 7.7vw;
+                box-shadow: 2.1vw 2.1vw 0 0 color.$drop-shadow;
+            }
+            a {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 1.3vw 9.3vw;
+                @include base.media-sp {
+                    padding: 5.1vw 17.5vw;
+                }
+                img {
+                    width: 2.1vw;
+                    margin-right: 1vw;
+                    @include base.media-sp {
+                        width: 8.2vw;
+                        margin-right: 4.1vw;
+                    }
+                }
+                span {
+                    color: color.$white;
+                    font-size: 1.2vw;
+                    font-weight: 700;
+                    @include base.media-sp {
+                        font-size: 4.1vw;
+                    }
+                }
+            }
+        }
+        &--btn02 {
+            background-color: color.$yellow;
+            border-radius: 4vw;
+            border: none;
+            box-shadow: 0.5vw 0.5vw 0 0 color.$drop-shadow;
+            // padding: 1.3vw 9.3vw;
+            @include base.media-sp {
+                width: 88%;
+                border-radius: 15.4vw;
+                // padding: 5.1vw 18.5vw;
+                margin-right: 0;
+                box-shadow: 2.1vw 2.1vw 0 0 color.$drop-shadow;
+            }
+            a {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 1.3vw 9.3vw;
+                @include base.media-sp {
+                    font-size: 4.1vw;
+                    padding: 5.1vw 17.5vw;
+                }
+                img {
+                    width: 1.7vw;
+                    margin-right: 1vw;
+                    @include base.media-sp {
+                        width: 6.7vw;
+                        margin-right: 4.1vw;
+                    }
+                }
+                span {
+                    color: color.$black;
+                    font-size: 1.2vw;
+                    font-weight: 700;
+                    @include base.media-sp {
+                        font-size: 4.1vw;
+                    }
+                }
+
+            }
+        }
+
+    }
+    &__other-services {
+        position: relative;
+        max-width: 66vw;
+        background-color: color.$light-gray;
+        padding: 4.4vw 4.6vw 4vw 4.6vw;
+        margin: 0 auto;
+        @include base.media-sp {
+            max-width: 80vw;
+            padding: 20.5vw 5.1vw 5.9vw 5.1vw;
+        }
+        h5 {
+            position: absolute;
+            top: -2.2vw;
+            left: 50%;
+            transform: translateX(-50%);
+            @include font.mochiy-pop;
+            font-size: 2.1vw;
+            color: color.$black;
+            white-space: nowrap;
+            @include base.media-sp {
+                top: -4.2vw;
+                font-size: 6.2vw;
+                line-height: 1;
+            }
+        }
+        &--banner {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @include base.media-sp {
+                flex-direction: column;
+            }
+            img {
+                width: 26vw;
+                @include base.media-sp {
+                    width: 69.2vw;
+                }
+            }
+            &--bnr01 {
+                margin-right: 3.4vw;
+                @include base.media-sp {
+                    margin-bottom: 3.4vw;
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+}
+/* myscreena4 * *********************************** */
+.myscreena4 {
+    position: relative;
+    width: 65.5vw;
+    margin: 8vw auto;
+    @include base.media-sp {
+        width: 79.5vw;
+    }
+    &__container {
+        position: relative;
+        padding: 4.6vw 4.8vw;
+        background-color: color.$white;
+        border-radius: 0.8vw;
+        @include base.media-sp {
+            padding: 18.7vw 15.4vw;
+            border-radius: 3.1vw;
+        }
+        h3 {
+            text-align: center;
+            @include font.zen-maru;
+            font-size: 1.9vw;
+            font-weight: 700;
+            margin-bottom: 3.1vw;
+            @include base.media-sp {
+                text-align: left;
+                font-size: 3.9vw;
+                line-height: 1.4;
+                margin-bottom: 7.2vw;
+            }
+        }
+        &--text {
+            display: flex;
+            align-items: flex-start;
+            @include base.media-sp {
+                align-items: center;
+                flex-direction: column;
+            }
+            p {
+                @include font.zen-maru;
+                font-size: 1.1vw;
+                margin-top: 0.9vw;
+                margin-right: 4vw;
+                @include base.media-sp {
+                    font-size: 3.1vw;
+                    margin-bottom: 4.6vw;
+                    margin-right: 0;
+                    margin-left: 0;
+                }
+            }
+            img {
+                width: 26vw;
+                @include base.media-sp {
+                    width: 59vw;
+                }
+            }
+        }
+    }
+    &__container:after {
+        position: absolute;
+        content: "";
+        top: 1.1vw;
+        bottom: 1.1vw;
+        left: 1.1vw;
+        right: 1.1vw;
+        background-image: linear-gradient(to right, color.$dark-beige 6px, transparent 6px),/* 上辺 */
+                        linear-gradient(to bottom, color.$dark-beige 6px, transparent 6px),/* 右辺 */
+                        linear-gradient(to left, color.$dark-beige 6px, transparent 6px),/* 下辺 */
+                        linear-gradient(to top, color.$dark-beige 6px, transparent 6px);/* 左辺 */
+        background-size: 10px 2px,/* 上辺 */
+                        2px 10px,/* 右辺 */
+                        10px 2px,/* 下辺 */
+                        2px 10px;/* 左辺 */
+        background-repeat: repeat-x,/* 上辺 */
+                        repeat-y,/* 右辺 */
+                        repeat-x,/* 下辺 */
+                        repeat-y;/* 左辺 */
+        background-position: left top,/* 上辺 */
+                            right top,/* 右辺 */
+                            right bottom,/* 下辺 */
+                            left bottom;/* 左辺 */
+        border-radius: 0.5vw;
+        @include base.media-sp {
+            top: 5.1vw;
+            bottom: 5.1vw;
+            left: 5.1vw;
+            right: 5.1vw;
+            background-image: linear-gradient(to right, color.$dark-beige 4px, transparent 6px),/* 上辺 */
+                        linear-gradient(to bottom, color.$dark-beige 6px, transparent 4px),/* 右辺 */
+                        linear-gradient(to left, color.$dark-beige 4px, transparent 6px),/* 下辺 */
+                        linear-gradient(to top, color.$dark-beige 6px, transparent 6px);/* 左辺 */
+            background-size: 10px 1px,/* 上辺 */
+                        1px 10px,/* 右辺 */
+                        10px 1px,/* 下辺 */
+                        1px 10px;/* 左辺 */
+            border-radius: 1.5vw;
+        }
+    }
+}
+/* scenes * *********************************** */
+.scenes {
+    position: relative;
+    &__container {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        margin-top: 4.6vw;
+        width: percentage(math.div(1294, 1512));
+        @include base.media-sp {
+            flex-wrap: wrap;
+            width: percentage(math.div(350, 390));
+            margin-top: 15vw;
+        }
+        &--item {
+            position: relative;
+            background-color: color.$white;
+            background-image: linear-gradient(0deg, transparent 31px, color.$light-dark-gray 32px), linear-gradient(90deg,  transparent 31px, color.$light-gray 32px);
+            background-size: 33px 33px;
+            border-radius: 0.5vw;
+            width: 19vw;
+            padding: 3.8vw 1.7vw 1.9vw 1.7vw;
+            @include base.media-sp {
+                background-image: linear-gradient(0deg, transparent 25px, color.$light-dark-gray 25px), linear-gradient(90deg,  transparent 25px, color.$light-gray 25px);
+                background-size: 27px 26px;
+                width: percentage(math.div(165, 390));
+                padding: 8.7vw 3vw 5.1vw 3vw;
+            }
+            &--tape {
+                position: absolute;
+                top: -1.5vw;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 10vw;
+                @include base.media-sp {
+                    top: -3.5vw;
+                    width: 22.1vw;
+                }
+            }
+            &--detail {
+                p {
+                    display: inline;
+                    @include font.zen-maru;
+                    font-size: 1.2vw;
+                    font-weight: 700;
+                    background: linear-gradient(transparent 70%, color.$light-skyblue 0%);
+                    @include base.media-sp {
+                        font-size: 3.1vw;
+                        font-weight: 500;
+                    }
+                }
+                &--img01 {
+                    width: 15vw;
+                    margin-top: 1.4vw;
+                    @include base.media-sp {
+                        width: 33.6vw;
+                        margin-top: 3.1vw;
+                    }
+                }
+                &--img02 {
+                    width: 13.7vw;
+                    margin-top: 1.9vw;
+                    @include base.media-sp {
+                        width: 31vw;
+                        margin-top: 4.4vw;
+                    }
+                }
+                &--img03 {
+                    width: 15vw;
+                    margin-top: 4vw;
+                    @include base.media-sp {
+                        width: 31vw;
+                        margin-top: 8.2vw;
+                    }
+                }
+                &--img04 {
+                    width: 16vw;
+                    margin-top: 3.6vw;
+                    @include base.media-sp {
+                        width: 33.8vw;
+                        margin-top: 6.9vw;
+                    }
+                }
+            }
+        }
+        &--item:not(:last-of-type) {
+            margin-right: 2.6vw;
+            @include base.media-sp {
+                margin-right: 0;
+            }
+        }
+        &--item:nth-of-type(odd) {
+            @include base.media-sp {
+                margin-right: 2.6vw;
+            }
+        }
+        &--item:nth-of-type(3) {
+            @include base.media-sp {
+                margin-top: 8.5vw;
+            }
+        }
+        &--item:nth-of-type(4) {
+            @include base.media-sp {
+                margin-top: 8.5vw;
+            }
+        }
+    }
+}
+.pt5 {
+    padding-top: 5vw!important;
+    @include base.media-sp {
+        padding-top: 11.8vw!important;
+    }
+}
+/* voice * *********************************** */
+.voices {
+    position: relative;
+    .voices__container {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        margin: 0 auto;
+        margin-top: 4vw;
+        @include base.media-sp {
+            flex-direction: column;
+            margin-top: 15.4vw;
+        }
+        &--card {
+            position: relative;
+            width: 26vw; /* 任意の横幅を指定 */
+            height: 20vw;
+            object-fit: cover;
+            cursor: pointer;
+            @include base.media-sp {
+                width: 90vw; /* 任意の横幅を指定 */
+                height: 61.5vw;
+                margin-bottom: 5.1vw;
+            }
+            &--front {
+                transition: all 0.6s;
+                position: absolute;
+                left: 0;
+                top: 0;
+                height: 100%;
+                width: 100%;
+                backface-visibility: hidden;
+                img {
+                    width: 100%;
+                }
+            }
+            &--back {
+                transform: rotateY(-180deg);
+                transition: all 0.6s;
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 26vw; /* 任意の横幅を指定 */
+                height: 20vw;
+                backface-visibility: hidden;
+                background-color: color.$white;
+                border-radius: 0.4vw;
+                box-shadow: 0.5vw 0.5vw 0 0 color.$drop-shadow;
+                padding: 1.3vw;
+                @include base.media-sp {
+                    width: 90vw; /* 任意の横幅を指定 */
+                    height: 61.5vw;
+                    padding: 5.1vw;
+                    border-radius: 1.3vw;
+                }
+                &--container{
+                    position: relative;
+                    height: 100%;/*表の高さを揃えるため*/
+                    border-radius: 0.4vw;
+                    background-color: color.$pink;
+                    margin: -1px;//背景の色が見えるのを防ぐ
+                    display: flex;
+                    flex-direction: column;
+                    align-items: stretch;
+                    justify-content: space-between;
+                    padding: 2.3vw;
+                    @include base.media-sp {
+                        padding: 5.7vw;
+                        border-radius: 1.3vw;
+                    }
+                    &--img01 {
+                        position: absolute;
+                        bottom: 0.9vw;
+                        right: 1vw;
+                        width: 4.7vw;
+                        transform: rotate(21.158deg);
+                    }
+                    &--cherry {
+                        position: absolute;//桜
+                        bottom: 0.9vw;
+                        right: 1vw;
+                        width: 4.7vw;
+                        transform: rotate(21.158deg);
+                        @include base.media-sp {
+                            width: 15.9vw;
+                            right: 5vw;
+                            bottom: 2vw;
+                        }
+                    }
+                    &--apple {
+                        position: absolute;//りんご
+                        bottom: 0.9vw;
+                        right: 1vw;
+                        width: 4.7vw;
+                        transform: rotate(21.158deg);
+                        @include base.media-sp {
+                            width: 15.9vw;
+                            right: 5vw;
+                            bottom: 2vw;
+                        }
+                    }
+                    &--star {
+                        position: absolute;//ほし
+                        bottom: 0.9vw;
+                        right: 1vw;
+                        width: 4.7vw;
+                        transform: rotate(3.949deg);
+                        @include base.media-sp {
+                            width: 15.9vw;
+                            right: 5vw;
+                            bottom: 2vw;
+                        }
+                    }
+                    &--heart {
+                        position: absolute;//ハート
+                        bottom: 0.9vw;
+                        right: 1vw;
+                        width: 4.7vw;
+                        transform: rotate(3.949deg);
+                        @include base.media-sp {
+                            width: 15.9vw;
+                            right: 5vw;
+                            bottom: 2vw;
+                        }
+                    }
+                    &--tulip {
+                        position: absolute;//チューリップ
+                        bottom: 0.9vw;
+                        right: 1vw;
+                        width: 4.7vw;
+                        transform: rotate(3.949deg);
+                        @include base.media-sp {
+                            width: 15.9vw;
+                            right: 5vw;
+                            bottom: 2vw;
+                        }
+                    }
+                    &--snow {
+                        position: absolute;//雪の結晶
+                        bottom: 0.9vw;
+                        right: 1vw;
+                        width: 4.7vw;
+                        transform: rotate(3.949deg);
+                        @include base.media-sp {
+                            width: 15.9vw;
+                            right: 5vw;
+                            bottom: 2vw;
+                        }
+                    }
+                    &--bat {
+                        position: absolute;//雪の結晶
+                        bottom: 0.9vw;
+                        right: 1vw;
+                        width: 4.7vw;
+                        transform: rotate(3.949deg);
+                        @include base.media-sp {
+                            width: 15.9vw;
+                            right: 5vw;
+                            bottom: 2vw;
+                        }
+                    }
+                    &--sunflower {
+                        position: absolute;//雪の結晶
+                        bottom: 0.9vw;
+                        right: 1vw;
+                        width: 4.7vw;
+                        transform: rotate(3.949deg);
+                        @include base.media-sp {
+                            width: 15.9vw;
+                            right: 5vw;
+                            bottom: 2vw;
+                        }
+                    }
+                    &--car {
+                        position: absolute;//雪の結晶
+                        bottom: 0.9vw;
+                        right: 1vw;
+                        width: 6.3vw;
+                        transform: rotate(3.949deg);
+                        @include base.media-sp {
+                            width: 15.9vw;
+                            right: 5vw;
+                            bottom: 2vw;
+                        }
+                    }
+                    &--comment {
+                        @include font.zen-maru;
+                        font-size: 0.9vw;
+                        font-weight: 700;
+                        color: color.$white;
+                        text-align: left;
+                        @include base.media-sp {
+                            font-size: 3.1vw;
+                            font-weight: 500;
+                        }
+                    }
+                    &--profile {
+                        z-index: 1;
+                        display: flex;
+                        align-items: baseline;
+                        justify-content: space-between;
+                        @include font.zen-maru;
+                        color: color.$white;
+                        margin-top: 1.8vw;
+                        white-space: nowrap;
+                        &--name {
+                            font-size: 0.8vw;
+                            font-weight: 700;
+                            @include base.media-sp {
+                                font-size: 3.1vw;
+                                font-weight: 500;
+                            }
+                            span {
+                                font-size: 1.3vw;
+                                font-weight: 700;
+                                @include base.media-sp {
+                                    font-size: 3.6vw;
+                                    font-weight: 500;
+                                }
+                            }
+                        }
+                        &--year {
+                            font-size: 0.8vw;
+                            font-weight: 700;
+                            @include base.media-sp {
+                                font-size: 3.1vw;
+                                font-weight: 500;
+                            }
+                        }
+                    }
+    
+                }
+            }
+        }
+        // &--card:before {
+        //     content: "";
+        //     display: block;
+        //     padding-top: 142.5%;
+        // }
+        &--card:hover .voices__container--card--front {
+            transform: rotateY(180deg);
+        }
+        &--card:hover .voices__container--card--back {
+            transform: rotateY(0);
+        }
+        
+        &--card:nth-of-type(n+4) {
+            margin-top: 2.6vw;
+        }
+    }
+}
+
+
+.bg-blue {
+    background-color: color.$blue!important;//背景色を変える
+}
+/* faq * *********************************** */
+.faq {
+    position: relative;
+    display: flex;
+    @include base.media-sp {
+        padding-bottom: 41vw;
+    }
+    &__illust {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 15.9vw;
+        transform: rotate(-15deg);
+        @include base.media-sp {
+            width: 29.7vw;
+            margin-left: 0;
+        }
+    }
+    @include base.media-sp {
+        flex-direction: column;
+    }
+    .section__heading2 {
+        position: relative;
+        z-index: 1;
+        text-align: left;
+        @include base.media-sp {
+            text-align: center;
+        }
+
+        h2 {
+            @include font.baloo;
+            font-size: 1.6vw;
+            font-weight: 800;
+            color: color.$red;
+            margin-bottom: 0.7vw;
+            @include base.media-sp {
+                font-size: 3.8vw;
+                margin-bottom: 2.6vw;
+            }
+        }
+        h3 {
+            @include font.mochiy-pop;
+            font-size: 2.4vw;
+            font-weight: 400;
+            line-height: 3.2vw;
+            @include base.media-sp {
+                font-size: 6.2vw;
+            }
+        }
+    }
+    .faq__container {
+        position: relative;
+        z-index: 1;
+        display: inline;
+        width: 56.7vw;
+        margin-left: 2.6vw;
+        text-align: left;
+        @include base.media-sp {
+            width: 100%;
+            margin-left: 0;
+        }
+        &--accordion {
+            max-width: 56.7vw;
+            margin-bottom: 1.2vw;
+            padding: 1.2vw 2.8vw;
+            /*背景*/
+            background-color: color.$white;
+            background-image: linear-gradient(0deg, transparent 31px, color.$light-dark-gray 32px), linear-gradient(90deg,  transparent 31px, color.$light-gray 32px);
+            background-size: 33px 33px;
+            border-radius: 0.5vw;
+            @include base.media-sp {
+                max-width: 100%;
+                margin-bottom: 5.1vw;
+                padding: 0 4.6vw;
+            }
+            &--summary {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                position: relative;
+                padding: 1em 0;
+                color: #333333;
+                font-weight: 600;
+                cursor: pointer;
+                @include base.media-sp {
+                    padding: 5.9vw 0;
+                }
+                &--container {
+                    display: flex;
+                    align-items: center;
+                    @include base.media-sp {
+                        width: 70vw;
+                        font-size: 3.6vw;
+                        // align-items: flex-start;
+                    }
+                    &--question {
+                        @include font.zen-maru;
+                        font-size: 2vw;
+                        font-weight: 700;
+                        color: color.$blue;
+                        margin-right: 0.7vw;
+                        @include base.media-sp {
+                            font-size: 6.2vw;
+                            margin-right: 4.6vw;
+                            line-height: 1;
+                        }
+                    }
+                    &--btn {
+                        display: inline-block;
+                        vertical-align: middle;
+                        color: color.$blue;
+                        line-height: 1;
+                        position: relative;
+                        width: 1.5em;
+                        height: 1.5em;
+                        border: 0.1em solid currentColor;
+                        border-radius: 50%;
+                        box-sizing: content-box;
+                        @include base.media-sp {
+                            width: 2.5em;
+                            height: 2.5em;
+                            border: 0.3em solid currentColor;
+                        }
+                        span {
+                            width: 52%;
+                            height: 0.1em;
+                            background: currentColor;
+                            border-radius: 0.1em;
+                            position: relative;
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            right: 0;
+                            bottom: 0;
+                            margin: auto;
+                            @include base.media-sp {
+                                height: 0.3em;
+                            }
+                        }
+                        span::before {
+                            content: '';
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            background: inherit;
+                            border-radius: inherit;
+                            transform: rotate(90deg);
+    
+                        }
+                    }
+                }
+            }
+            &--summary::-webkit-details-marker {
+                /* Safari-デフォルトの三角形を削除*/
+                display: none;
+              }
+            p {
+                transform: translateY(-10px);
+                opacity: 0;
+                margin: 0;
+                padding: 0.9vw 0;
+                color: #333333;
+                transition: transform .5s, opacity .5s;
+                a {
+                    font-weight: 700;
+                    color: color.$blue;
+                }
+                a:hover {
+                    opacity: 0.7;
+                }
+            }
+        }
+    }
+}
+summary::-webkit-details-marker {
+    /* Safari-デフォルトの三角形を削除*/
+    display: none;
+  }
+.faq__container--accordion[open] p {
+    transform: none;
+    opacity: 1;
+    @include base.media-sp {
+        font-size: 3.1vw;
+        padding: 5.1vw 0;
+    }
+}
+.faq__container--accordion[open] .faq__container--accordion--summary {
+    /*点線*/
+    background-size: 10px 2px;
+    background-image: linear-gradient(to right, color.$dark-beige 6px, transparent 6px);
+    background-repeat: repeat-x;
+    background-position: bottom;
+ }
+.faq__container--accordion[open] .faq__container--accordion--summary--container--btn span::before {
+   display: none;
+}
+
+/* link * *********************************** */
+.links {
+    position: relative;
+    background-color: color.$white;
+    border-radius: 0.5vw;
+    box-shadow: 0.5vw 0.5vw 0 0 color.$drop-shadow;
+    padding: 2.8vw 0 5.4vw 0;
+    margin-bottom: 9.3vw;
+    @include base.media-sp {
+        padding-bottom: 10.8vw;
+        
+    }
+
+    &__arch {
+        z-index: 1;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 1.6vw;
+        font-weight: 800;
+        @include base.media-sp {
+            font-size: 3.5vw;
+        }
+        svg {
+           overflow: visible;
+           text {
+               fill: color.$red;
+             }
+         }
+    }
+    &__circle-half {
+        z-index: 0;
+        position: absolute;
+        top: -3vw;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 17.5vw;
+        @include base.media-sp {
+            top: -11vw;
+            width: 73.8vw;
+            
+        }
+    }
+    &__heading {
+        z-index: 2;
+        @include font.mochiy-pop;
+        font-size: 2.4vw!important;
+        margin-bottom: 4vw;
+        @include base.media-sp {
+            font-size: 6.2vw!important;
+        }
+    }
+    &__container {
+        z-index: 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        @include base.media-sp {
+            flex-direction: column;
+        }
+
+        &--banner {
+            width: 31vw;
+            height: 7.3vw;
+            @include base.media-sp {
+                width: 79.5vw;
+                height: 20vw;
+            }
+            img {
+                border-radius: 0.53vw;
+            }
+        }
+    }
+    &__container a:first-of-type {
+        margin-right: 4vw;
+        @include base.media-sp {
+            margin-right: 0;
+            margin-bottom: 5.1vw;
+        }
+    }
+    
+}
+.links-company {
+    p {
+        @include font.zen-maru;
+        font-size: 1vw;
+        font-weight: 500;
+        width: 65.5vw;
+        margin: 0 auto;
+        margin-bottom: 4.2vw;
+        @include base.media-sp {
+            font-size: 3.1vw;
+            width: 67.1vw;
+        }
+
+    }
+    &__container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include base.media-sp {
+            flex-direction: column;
+        }
+        &--item {
+            a {
+                display: flex;
+                align-items: center;
+            }
+            span {
+                @include font.zen-maru;
+                font-size: 1.6vw;
+                font-weight: 700;
+                color: color.$black;
+                margin-right: 1.3vw;
+                @include base.media-sp {
+                    font-size: 4.1vw;
+                    font-weight: 500;
+                }
+            }
+            &--arrow {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 2.5vw;
+                height: 2.5vw;
+                border-radius: 50%;
+                background-color: color.$red;
+                box-shadow: 0.3vw 0.4vw 0px 0px color.$drop-shadow;
+                @include base.media-sp {
+                    width: 5.9vw;
+                    height: 5.9vw;
+                }
+                img {
+                    width: 0.8vw;
+                    @include base.media-sp {
+                        width: 1.8vw;
+                    }
+                }
+            }
+        }
+        &--item:not(:last-of-type) {
+            margin-right: 4vw;
+            @include base.media-sp {
+                margin-right: 0;
+                margin-bottom: 5.1vw;
+            }
+        }
+    }
+}
