@@ -72,6 +72,9 @@ body {
     margin: 0 auto;
     z-index: 0;
     pointer-events : none;
+    @media screen and (min-width: 787px) and (orientation: landscape)  {
+        height: calc(100vh - 11vw);
+    }
     @include base.media-sp {
         height: 84vh;
         width: percentage(math.div(350, 390));
@@ -161,6 +164,38 @@ body {
         }
     }
 }
+/*PC版のみ 画面をクリックしてみてね*/
+.fv__balloon {
+    position: absolute;
+    bottom: 11.5vw;
+    right: 14.5vw;
+    &--container {
+        position: relative;
+        text-align: center;
+        &--img {
+            width: 10.6vw;
+        }
+        &--text {
+            position: absolute;
+            top: 1.3vw;
+            left: 2.5vw;
+            font-family: "Zen Maru Gothic", serif;
+            font-size: 0.8vw;
+            font-weight: 700;
+            line-height: 0.8;
+            color: color.$white;
+            span {
+                font-size: 1.2vw;
+                font-style: italic;
+                line-height: 1;
+                font-weight: 900;
+                margin-left: 0.2vw;
+            }
+        }
+    }
+}
+
+
 /* section * *********************************** */
 .section {
     margin: 9.2vw auto;
@@ -810,6 +845,14 @@ body {
                             font-size: 3.1vw;
                             width: 57.5vw;
                         }
+                        span {
+                            font-size: 0.9vw;
+                            font-weight: 400;
+                            @include base.media-sp {
+                                font-size: 3.1vw;
+                                font-weight: 400;
+                            }
+                        }
                     }
                 }
                 &--list:not(:last-of-type) {
@@ -817,6 +860,9 @@ body {
                     @include base.media-sp {
                         margin-bottom: 5.1vw;
                     }
+                }
+                .flex-start {
+                    align-items: flex-start;
                 }
             }
         }

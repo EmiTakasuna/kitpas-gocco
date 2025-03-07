@@ -27,6 +27,12 @@ gsap.set('.fv_shape', {
 gsap.set('.fv_illust', {
   opacity: 0,
 });
+gsap.set('.fv_illust-girl', {
+  opacity: 0,
+});
+gsap.set('.fv_illust-balloon', {
+  opacity: 0,
+});
 
 
 const TL = gsap.timeline();
@@ -91,6 +97,22 @@ TL.to(shape01, { fill: "#0096D8", duration: 0.15})
   .to('.fv_illust',
     {
       opacity: 1,
+    }
+  )
+  .to('.fv_illust-girl',
+    {
+      opacity: 1,
+    }
+  )
+  .to('.fv_illust-balloon',
+    {
+      opacity: 1,
+      duration: 0.8,
+      keyframes: {
+        x: [0, 0, 0, 0, 0],
+        y: [0, -20, 0, 0, 0],
+        ease: "power1.inOut"
+      },
     }
   );
 

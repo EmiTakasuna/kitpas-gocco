@@ -146,9 +146,11 @@
 
 
 .footer {
-    padding-top: 5vw;
-    margin-top: 15.4vw;
-    // margin-bottom: 6.4vw;
+    margin-bottom: 6.4vw;
+    @include base.media-sp {
+        padding-top: 5vw;
+        margin-top: 15.4vw;
+    }
     &__nav {
         display: flex;
         justify-content: space-between;

@@ -726,6 +726,11 @@ body {
   z-index: 0;
   pointer-events: none;
 }
+@media screen and (min-width: 787px) and (orientation: landscape) {
+  .fv-mv {
+    height: calc(100vh - 11vw);
+  }
+}
 @media screen and (max-width: 768px) and (orientation: portrait) {
   .fv-mv {
     height: 84vh;
@@ -820,6 +825,37 @@ body {
     width: 9.8vw;
     height: auto;
   }
+}
+
+/*PC版のみ 画面をクリックしてみてね*/
+.fv__balloon {
+  position: absolute;
+  bottom: 11.5vw;
+  right: 14.5vw;
+}
+.fv__balloon--container {
+  position: relative;
+  text-align: center;
+}
+.fv__balloon--container--img {
+  width: 10.6vw;
+}
+.fv__balloon--container--text {
+  position: absolute;
+  top: 1.3vw;
+  left: 2.5vw;
+  font-family: "Zen Maru Gothic", serif;
+  font-size: 0.8vw;
+  font-weight: 700;
+  line-height: 0.8;
+  color: #fff;
+}
+.fv__balloon--container--text span {
+  font-size: 1.2vw;
+  font-style: italic;
+  line-height: 1;
+  font-weight: 900;
+  margin-left: 0.2vw;
 }
 
 /* section * *********************************** */
@@ -1571,6 +1607,16 @@ body {
     width: 57.5vw;
   }
 }
+.how-to-use__container--order--container--list p span {
+  font-size: 0.9vw;
+  font-weight: 400;
+}
+@media screen and (max-width: 768px) and (orientation: portrait) {
+  .how-to-use__container--order--container--list p span {
+    font-size: 3.1vw;
+    font-weight: 400;
+  }
+}
 .how-to-use__container--order--container--list:not(:last-of-type) {
   margin-bottom: 2vw;
 }
@@ -1578,6 +1624,9 @@ body {
   .how-to-use__container--order--container--list:not(:last-of-type) {
     margin-bottom: 5.1vw;
   }
+}
+.how-to-use__container--order--container .flex-start {
+  align-items: flex-start;
 }
 
 /* shopping * *********************************** */
@@ -3082,8 +3131,13 @@ summary::-webkit-details-marker {
 }
 
 .footer {
-  padding-top: 5vw;
-  margin-top: 15.4vw;
+  margin-bottom: 6.4vw;
+}
+@media screen and (max-width: 768px) and (orientation: portrait) {
+  .footer {
+    padding-top: 5vw;
+    margin-top: 15.4vw;
+  }
 }
 .footer__nav {
   display: flex;
