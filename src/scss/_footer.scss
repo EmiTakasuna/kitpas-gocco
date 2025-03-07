@@ -3,10 +3,7 @@
 @use "color";
 @use "font";
 
-
-.footer {
-    padding-top: 5vw;
-    margin-bottom: 6.4vw;
+.share {
     &__logo {
         width: percentage(math.div(256, 1512));//デザイン還付のサイズ÷フレームサイズ
         height: auto;
@@ -145,6 +142,13 @@
         }
     }
 
+}
+
+
+.footer {
+    padding-top: 5vw;
+    margin-top: 15.4vw;
+    // margin-bottom: 6.4vw;
     &__nav {
         display: flex;
         justify-content: space-between;
@@ -242,7 +246,6 @@
     @include base.media-sp {
         flex-direction: column;
         align-items: center;
-        margin-bottom: 15.4vw;
     }
     
 }

@@ -73,7 +73,12 @@ td {
 /* スマホ切り替え * *********************************** */
 $break-point: 768px;
 @mixin media-sp {
-    @media screen and (max-width: $break-point) {
+    @media screen and (max-width: $break-point) and (orientation: portrait)  {
+    @content;
+    }
+}
+@mixin media-landscape {
+    @media screen and (max-width: $break-point) and (orientation: landscape)  {
     @content;
     }
 }

@@ -8,7 +8,7 @@ function moveImg(event) {
     }
 
     // ランダムに選ばれる画像のリスト、画像のパスが必要
-    var images = ["../assets/images/icon_apple.svg", "../assets/images/icon_bat.svg", "../assets/images/icon_car.svg","../assets/images/icon_cherry.svg","../assets/images/icon_heart.svg","../assets/images/icon_sunflower.svg","../assets/images/icon_snow.svg"];
+    var images = ["assets/images/icon_apple.svg", "assets/images/icon_bat.svg", "assets/images/icon_car.svg","assets/images/icon_cherry.svg","assets/images/icon_heart.svg","assets/images/icon_sunflower.svg","assets/images/icon_snow.svg"];
     var randomIndex = Math.floor(Math.random() * images.length); // ランダムに画像を選択
 
     // 新しいimg要素を作成

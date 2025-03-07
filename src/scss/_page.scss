@@ -58,6 +58,7 @@ body {
         right: 20vw;
         width: 7vw;
         @include base.media-sp {
+            bottom: -6.4vw;
             width: 16.2vw;
             max-width: 85px;
         }
@@ -67,7 +68,7 @@ body {
     object-fit: cover;
     border-radius: 0.66vw;
     width: 85%;
-    height: 75vh;
+    // height: 75vh;
     margin: 0 auto;
     z-index: 0;
     pointer-events : none;
@@ -241,7 +242,7 @@ body {
         p {
             @include font.zen-maru;
             font-size: 1.7vw;
-            font-weight: 500;
+            font-weight: 700;
             @include base.media-sp {
                 font-size: 3.6vw;
                 line-height: 2.5;
@@ -481,7 +482,7 @@ body {
         &--star {
             position: absolute;
             top: -1.7vw;
-            left: 87.1vw;
+            left: 48vw;
             width: 3.75vw;
             @include base.media-sp {
                 top: 8.7vw;
@@ -560,6 +561,7 @@ body {
                 p {
                     position: relative;//前面配置のため
                     z-index: 1;//前面配置のため
+                    font-weight: 700;
                     @include base.media-sp {
                         font-size: 3.1vw;
                         width: 95%;

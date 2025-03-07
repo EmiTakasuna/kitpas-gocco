@@ -1,6 +1,6 @@
 $(function () {
     $(".slider").slick({
-      autoplay: true,
+      autoplay: false,
       arrows: false,
       fade: true,
       asNavFor: ".thumbnail",

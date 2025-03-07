@@ -43,7 +43,7 @@ TL.to(shape01, { fill: "#0096D8", duration: 0.15})
     {
       opacity: 1,
       duration: 0.5,
-      delay: 0.2,
+      delay: 4,
     }
   )
   .to('.fv_shape',

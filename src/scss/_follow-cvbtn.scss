@@ -9,7 +9,6 @@
     bottom: 25px;
     right: 38px;
     padding: 0.4vw 2.6vw;
-
     width: 9.8vw;
     height: 7.9vw;
 
@@ -50,6 +49,9 @@
         height: 97px;
         bottom: 10px;
         right: 10px;
+    }
+    a:hover {
+        opacity: 1;
     }
     &__link {
         display: flex;
@@ -198,5 +200,12 @@
 }
 .js-follow-cvbtn.show {
     display: block;
-    transition: 1s;
+    // transition: 1s;
   }
+
+.js-follow-cvbtn.show.is-hidden {
+    @include base.media-sp {
+        display: none;
+        transition: 0.3s;
+    }
+}
