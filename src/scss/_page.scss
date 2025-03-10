@@ -169,11 +169,19 @@ body {
     position: absolute;
     bottom: 11.5vw;
     right: 14.5vw;
+    @include base.media-sp {
+        bottom: 22.5vw;
+        right: 33.5vw;
+    }
     &--container {
         position: relative;
         text-align: center;
         &--img {
             width: 10.6vw;
+            @include base.media-sp {
+                transform: scaleX(-1);//左右反転
+                width: 33.8vw;
+            }
         }
         &--text {
             position: absolute;
@@ -184,16 +192,41 @@ body {
             font-weight: 700;
             line-height: 0.8;
             color: color.$white;
+            @include  base.media-sp {
+                top: 3vw;
+                left: 8.2vw;
+                font-size: 2.8vw;
+                line-height: 1.4;
+            }
             span {
+                line-height: 1;
+            }
+            &--exclamation {
                 font-size: 1.2vw;
                 font-style: italic;
                 line-height: 1;
                 font-weight: 900;
                 margin-left: 0.2vw;
+                @include  base.media-sp {
+                    font-size: 3.2vw;
+                }
             }
         }
     }
 }
+.show_pc--fv {
+    display: inline-block;
+    @include base.media-sp {
+        display: none;
+    }
+}
+.show_sp--fv {
+    display: none;
+    @include base.media-sp {
+        display: inline-block;
+    }
+}
+
 
 
 /* section * *********************************** */
@@ -1471,6 +1504,14 @@ body {
                 backface-visibility: hidden;
                 img {
                     width: 100%;
+                }
+                .tap-icon {
+                    @include base.media-sp {
+                        position: absolute;
+                        top: 20px;
+                        right: 20px;
+                        width: 14.9vw;
+                    }
                 }
             }
             &--back {

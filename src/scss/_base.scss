@@ -71,7 +71,7 @@ td {
     border: 0;
 }
 /* スマホ切り替え * *********************************** */
-$break-point: 768px;
+$break-point: 750px;
 @mixin media-sp {
     @media screen and (max-width: $break-point) and (orientation: portrait)  {
     @content;

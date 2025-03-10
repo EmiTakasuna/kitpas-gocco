@@ -12,7 +12,7 @@
             @include base.media-sp {
                 top: 50%;
                 left: 50%;
-                transform: translate(-50%, -71%);
+                transform: translate(-50%, -90%);
             }
         &--flex {
             display: flex;
@@ -353,6 +353,9 @@
 .stamp_img {
 	overflow: hidden;
     max-width: 4.3vw;
+    @include base.media-sp {
+        max-width: 11.3vw;
+    }
 }
 
 /*カタカタ*/

@@ -3,31 +3,38 @@
 <head prefix="og: https://ogp.me/ns#">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>キットパスゴッコ特設サイト</title>
+    <title>キットパスゴッコ特設サイト｜RISO</title>
     <meta name="description" content="「キットパスゴッコ」は、肌にやさしいインクとデザイン付き専用スクリーンを使ってボディペイントなどが楽しめるプリントキットです。"/>
     
-    <!--OGP-->
-    <meta property="og:url" content="https://www.riso.co.jp/learn/risoart/lp/kitpasgocco/index.html" />
-    <meta property="og:title" content="キットパスゴッコ特設サイト|RISO" />
-    <meta property="og:type" content="website">
-    <meta property="og:description" content="「キットパスゴッコ」は、肌にやさしいインクとデザイン付き専用スクリーンを使ってボディペイントが楽しめるプリントキットです。" />
-    <meta property="og:image" content="../../assets/images/ogp.png" />
-    <meta name="twitter:card" content="Summary Card" />
-    <meta name="twitter:site" content="@risokagaku_ssp" />
-    <meta property="og:site_name" content="キットパスゴッコ特設サイト" />
-    <meta property="og:locale" content="ja_JP" />
+    <!--GTM-->
+    <?php include($_SERVER['DOCUMENT_ROOT'] . '/common/renew_files/inc/tag-gtm_h.html') ?>
+    <!-- ↓↓↓ Twitter -->
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:site" content="@risokagaku_ssp"/>
+    <meta name="twitter:title" content="キットパスゴッコ特設サイト｜RISO"/>
+    <meta name="twitter:description" content="「キットパスゴッコ」は、肌にやさしいインクとデザイン付き専用スクリーンを使ってボディペイントなどが楽しめるプリントキットです。" />
+    <meta name="twitter:image" content="/assets/images/ogp.png" />
+    <meta name="twitter:url" content="https://www.riso.co.jp/learn/risoart/lp/kitpasgocco/index.html" />
+    <!-- ↑↑↑ Twitter -->
+
+    <!-- ↓↓↓ og -->
+    <meta property="og:title" content="キットパスゴッコ特設サイト｜RISO">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.riso.co.jp/learn/risoart/lp/kitpasgocco/index.html">
+    <meta property="og:image" content="/assets/images/ogp.png">
+    <meta property="og:site_name" content="理想科学工業株式会社｜RISO">
+    <meta property="og:description" content="「キットパスゴッコ」は、肌にやさしいインクとデザイン付き専用スクリーンを使ってボディペイントなどが楽しめるプリントキットです。">
+    <meta property="og:locale" content="ja_JP"/>
+    <!-- ↑↑↑ og -->
 
     <!--IEに対して互換性のモードを指定-->
     <meta http-equiv="x-ua-compatible" content="IE=edge">
 
     <!--サイトアイコン-->
-    <link rel="icon" href="/favicon.ico" sizes="32x32">
-    <link rel="icon" href="../../assets/images/ogp/favicon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="../../assets/images/ogp/favicon.svg">
+    <link rel="icon" href="assets/img/cmn_favicon.ico" type="image/vnd.microsoft.icon">
 
     <!--電話番号,メールアドレスのリンク変換防止-->
     <meta name="format-detection" content="email=no,telephone=no,address=no"/>
-
 
     <!--GoogleFont-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -47,6 +54,8 @@
 
 </head>
 <body  class="body">
+  <!--GTM-->
+  <?php include($_SERVER['DOCUMENT_ROOT'] . '/common/renew_files/inc/tag-gtm_b.html') ?>
 
   <div class="bg-white">
 
@@ -226,7 +235,7 @@
             <div class="fv__balloon">
                 <div class="fv__balloon--container fv_illust-balloon">
                     <img src="assets/images/first-view/fv_balloon.svg" class="fv__balloon--container--img" alt="吹き出し" loading="lazy">
-                    <p class="fv__balloon--container--text">画面をクリック<br>してみてね<span>!</span></p>
+                    <p class="fv__balloon--container--text">画面を<span class="show_pc--fv">クリック</span><span class="show_sp--fv">タップ</span><br>してみてね<span class="fv__balloon--container--text--exclamation">!</span></p>
                 </div>
             </div>
             <!--sp版-->
@@ -405,7 +414,7 @@
                                 <div class="how-to-use__container--order--container--list--number">
                                     <span>2</span>
                                 </div>
-                                <p>プリントしたい箇所にデザインを貼り付け、<br class="show_pc">インクをのせ、プリントします。</p>
+                                <p>プリントしたい箇所にスクリーンを貼り付け、<br class="show_pc">インクをのせ、プリントします。</p>
                             </li>
                             <li class="how-to-use__container--order--container--list">
                                 <div class="how-to-use__container--order--container--list--number">
@@ -670,14 +679,14 @@
                 <div class="voices__container--card--front">
                     <img src="assets/images/voices/voices_img01.png" alt="キットパスゴッコを体験する親子の写真" class="show_pc" loading="lazy">
                     <img src="assets/images/voices/voices_img01_sp.png" alt="キットパスゴッコを体験する親子の写真" class="show_sp"  loading="lazy">
-
+                    <img src="assets/images/voices/tap-icon.svg" alt="タップアイコン" class="tap-icon show_sp"  loading="lazy">
                 </div>
                 <!-- 裏面のコンテンツ -->
                 <div class="voices__container--card--back">
                     <div class="voices__container--card--back--container bg-blue">
                         <img src="assets/images/voices/icon_cherry.svg" alt="さくらのプリント柄" class="voices__container--card--back--container--cherry" loading="lazy">
                         <p class="voices__container--card--back--container--comment">
-                            ウェットティッシュで拭いただけで落ちて、お家で使用しても安心と思いました。
+                            拭いただけで落ちて、お家で使用しても安心と思いました。
                         </p>
                         <div class="voices__container--card--back--container--profile">
                             <p class="voices__container--card--back--container--profile--name"><span>ゆうみ</span>さん（会社員）</p>
@@ -693,13 +702,14 @@
                     <div class="voices__container--card--front">
                         <img src="assets/images/voices/voices_img04.png" alt="キットパスゴッコを体験する親子の写真" class="show_pc" loading="lazy">
                         <img src="assets/images/voices/voices_img04_sp.png" alt="キットパスゴッコを体験する親子の写真" class="show_sp"  loading="lazy">
+                        <img src="assets/images/voices/tap-icon.svg" alt="タップアイコン" class="tap-icon show_sp"  loading="lazy">
                     </div>
                     <!-- 裏面のコンテンツ -->
                     <div class="voices__container--card--back">
                         <div class="voices__container--card--back--container">
                             <img src="assets/images/voices/icon_heart.svg" alt="ハートのプリント柄" class="voices__container--card--back--container--heart" loading="lazy">
                             <p class="voices__container--card--back--container--comment">
-                                とても楽しく絵の具を触っていて、充実した時間になったと思います。絵の具で肌にペイントすることに抵抗がありましたが、グッと身近なものになりました！
+                                とても楽しくインクを触っていて、充実した時間になったと思います。インクで肌にペイントすることに抵抗がありましたが、グッと身近なものになりました！
                             </p>
                             <div class="voices__container--card--back--container--profile">
                                 <p class="voices__container--card--back--container--profile--name"><span>まりこ</span>さん（会社員）</p>
@@ -714,14 +724,15 @@
                 <!-- 表面のコンテンツ -->
                 <div class="voices__container--card--front">
                     <img src="assets/images/voices/voices_img03.png" alt="キットパスゴッコを体験する親子の写真" class="show_pc"/>
-                    <img src="assets/images/voices/voices_img03_sp.png" alt="キットパスゴッコを体験する親子の写真" class="show_sp" />
+                    <img src="assets/images/voices/voices_img03_sp.png" alt="キットパスゴッコを体験する親子の写真" class="show_sp"/>
+                    <img src="assets/images/voices/tap-icon.svg" alt="タップアイコン" class="tap-icon show_sp"  loading="lazy">
                 </div>
                 <!-- 裏面のコンテンツ -->
                 <div class="voices__container--card--back">
                     <div class="voices__container--card--back--container bg-blue">
                         <img src="assets/images/voices/icon_star.svg" alt="ほしのプリント柄" class="voices__container--card--back--container--star" loading="lazy">
                         <p class="voices__container--card--back--container--comment">
-                            米油なので安心なのと、水ですぐ落とせる点がすごく良いと思いました。はみ出し部分、すぐに落ちたのですごく簡単で驚きました。
+                            米油なので安心なのと、水ですぐ落とせる点がすごく良いと思いました。はみ出し部分、すぐ落ちたのですごく簡単で驚きました。
                         </p>
                         <div class="voices__container--card--back--container--profile">
                             <p class="voices__container--card--back--container--profile--name"><span>マー</span>さん（会社員）</p>
@@ -736,7 +747,8 @@
                     <!-- 表面のコンテンツ -->
                     <div class="voices__container--card--front">
                         <img src="assets/images/voices/voices_img02.png" alt="キットパスゴッコを体験する親子の写真" class="show_pc"/>
-                        <img src="assets/images/voices/voices_img02_sp.png" alt="キットパスゴッコを体験する親子の写真" class="show_sp" />
+                        <img src="assets/images/voices/voices_img02_sp.png" alt="キットパスゴッコを体験する親子の写真" class="show_sp"/>
+                        <img src="assets/images/voices/tap-icon.svg" alt="タップアイコン" class="tap-icon show_sp"  loading="lazy">
                     </div>
                     <!-- 裏面のコンテンツ -->
                     <div class="voices__container--card--back">
@@ -758,14 +770,15 @@
                 <!-- 表面のコンテンツ -->
                 <div class="voices__container--card--front">
                     <img src="assets/images/voices/voices_img05.png" alt="キットパスゴッコを体験する親子の写真" class="show_pc"/>
-                    <img src="assets/images/voices/voices_img05_sp.png" alt="キットパスゴッコを体験する親子の写真" class="show_sp" />
+                    <img src="assets/images/voices/voices_img05_sp.png" alt="キットパスゴッコを体験する親子の写真" class="show_sp"/>
+                    <img src="assets/images/voices/tap-icon.svg" alt="タップアイコン" class="tap-icon show_sp"  loading="lazy">
                 </div>
                 <!-- 裏面のコンテンツ -->
                 <div class="voices__container--card--back">
                     <div class="voices__container--card--back--container bg-blue">
                         <img src="assets/images/voices/icon_tulip.svg" alt="チューリップのプリント柄" class="voices__container--card--back--container--tulip" loading="lazy">
                         <p class="voices__container--card--back--container--comment">
-                            簡単にできるのでこどもも楽しく取り組んでいた。水ですぐ落とせるのは、こどもにはありがたいです。
+                            簡単にできるのでこどもも楽しく取り組んでいた。水でさっと落とせるのは、こどもにはありがたいです。
                         </p>
                         <div class="voices__container--card--back--container--profile">
                             <p class="voices__container--card--back--container--profile--name"><span>しおり</span>さん（主婦）</p>
@@ -780,13 +793,14 @@
                 <div class="voices__container--card--front">
                     <img src="assets/images/voices/voices_img06.png" alt="キットパスゴッコを体験する親子の写真" class="show_pc" loading="lazy">
                     <img src="assets/images/voices/voices_img06_sp.png" alt="キットパスゴッコを体験する親子の写真" class="show_sp" loading="lazy">
+                    <img src="assets/images/voices/tap-icon.svg" alt="タップアイコン" class="tap-icon show_sp"  loading="lazy">
                 </div>
                 <!-- 裏面のコンテンツ -->
                 <div class="voices__container--card--back">
                     <div class="voices__container--card--back--container">
                         <img src="assets/images/voices/icon_snow.svg" alt="雪の結晶のプリント柄" class="voices__container--card--back--container--snow" loading="lazy">
                         <p class="voices__container--card--back--container--comment">
-                            手軽にプリントできておもしろかったです。やり直しがすぐにできるのもよかったです。こどももこだわりをもって楽しんでいました。トートバッグなどには子供もできてよいですね。
+                            手軽にプリントできておもしろかったです。やり直しがすぐにできるのもよかったです。こどももこだわりをもって楽しんでいました。トートバッグなどにはこどももできてよいですね。
                         </p>
                         <div class="voices__container--card--back--container--profile">
                             <p class="voices__container--card--back--container--profile--name"><span>ちか</span>さん（自営業）</p>
@@ -801,6 +815,7 @@
                 <div class="voices__container--card--front">
                     <img src="assets/images/voices/voices_img07.png" alt="キットパスゴッコを体験する親子の写真" class="show_pc" loading="lazy">
                     <img src="assets/images/voices/voices_img07_sp.png" alt="キットパスゴッコを体験する親子の写真" class="show_sp" loading="lazy">
+                    <img src="assets/images/voices/tap-icon.svg" alt="タップアイコン" class="tap-icon show_sp"  loading="lazy">
                 </div>
                 <!-- 裏面のコンテンツ -->
                 <div class="voices__container--card--back">
@@ -822,6 +837,7 @@
                 <div class="voices__container--card--front">
                     <img src="assets/images/voices/voices_img08.png" alt="キットパスゴッコを体験する親子の写真" class="show_pc" loading="lazy">
                     <img src="assets/images/voices/voices_img08_sp.png" alt="キットパスゴッコを体験する親子の写真" class="show_sp"  loading="lazy">
+                    <img src="assets/images/voices/tap-icon.svg" alt="タップアイコン" class="tap-icon show_sp"  loading="lazy">
                 </div>
                 <!-- 裏面のコンテンツ -->
                 <div class="voices__container--card--back">
@@ -843,6 +859,7 @@
                 <div class="voices__container--card--front">
                     <img src="assets/images/voices/voices_img09.png" alt="キットパスゴッコを体験する親子の写真" class="show_pc" loading="lazy">
                     <img src="assets/images/voices/voices_img09_sp.png" alt="キットパスゴッコを体験する親子の写真" class="show_sp"  loading="lazy">
+                    <img src="assets/images/voices/tap-icon.svg" alt="タップアイコン" class="tap-icon show_sp"  loading="lazy">
                 </div>
                 <!-- 裏面のコンテンツ -->
                 <div class="voices__container--card--back">
