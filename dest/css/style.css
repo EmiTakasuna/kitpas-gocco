@@ -342,6 +342,13 @@ header .header__logo {
   margin: 0 auto;
 }
 
+.hamburger-menu:hover .hamburger-menu__heading {
+  opacity: 0.7;
+}
+.hamburger-menu:hover .hamburger-menu__lines {
+  opacity: 0.7;
+}
+
 .hamburger-menu {
   position: relative;
   display: flex;
@@ -1266,7 +1273,7 @@ body {
 @media screen and (max-width: 750px) and (orientation: portrait) {
   .features__heading--star {
     top: 8.7vw;
-    left: 196vw;
+    left: 58vw;
     width: 6.4vw;
   }
 }
@@ -1650,16 +1657,6 @@ body {
   .how-to-use__container--order--container--list p {
     font-size: 3.1vw;
     width: 57.5vw;
-  }
-}
-.how-to-use__container--order--container--list p span {
-  font-size: 0.9vw;
-  font-weight: 400;
-}
-@media screen and (max-width: 750px) and (orientation: portrait) {
-  .how-to-use__container--order--container--list p span {
-    font-size: 3.1vw;
-    font-weight: 400;
   }
 }
 .how-to-use__container--order--container--list:not(:last-of-type) {

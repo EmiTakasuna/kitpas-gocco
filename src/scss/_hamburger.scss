@@ -22,7 +22,14 @@
     margin: 0 auto;
     // cursor: pointer;
 }
-
+.hamburger-menu:hover {
+    .hamburger-menu__heading {
+        opacity: 0.7;
+    }
+    .hamburger-menu__lines {
+        opacity: 0.7;
+    }
+}
 .hamburger-menu {
     position: relative;
     display: flex;

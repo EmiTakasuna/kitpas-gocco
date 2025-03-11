@@ -20,8 +20,8 @@ function moveImg(event) {
     newImg.classList.add("stamp_img");
 
     // 最大サイズを指定（例: 100px x 100px）
-    var maxWidth = 20;
-    var maxHeight = 20;
+    var maxWidth = 100;
+    var maxHeight = 100;
 
     // 画像がロードされてからサイズ調整と位置設定を行う
     newImg.onload = function() {
@@ -37,23 +37,44 @@ function moveImg(event) {
         newImg.height = imgHeight * ratio;
 
         // 画面幅に応じたクリック位置を取得して、画像を配置
-        var adjustedX = (event.pageX / window.innerWidth) * 100;  // 画面幅に対するクリック位置（%）
-        var adjustedY = (event.pageY / window.innerHeight) * 100;  // 画面高さに対するクリック位置（%）
+        // var adjustedX = (event.pageX / window.innerWidth) * 100;  // 画面幅に対するクリック位置（%）
+        // var adjustedY = (event.pageY / window.innerHeight) * 100;  // 画面高さに対するクリック位置（%）
 
         // 画像を配置する位置を計算（画像が画面を超えないように調整）
-        var left = (adjustedX / 100) * window.innerWidth - newImg.width / 2;
-        var top = (adjustedY / 100) * window.innerHeight - newImg.height / 2;
+        // var left = (adjustedX / 100) * window.innerWidth - newImg.width / 2;
+        // var top = (adjustedY / 100) * window.innerHeight - newImg.height / 2;
+
+        var fvSection = document.getElementById("fv");
+        
+        // fv内でのクリック座標を取得
+        var fvRect = fvSection.getBoundingClientRect();
+        var clickX = event.clientX - fvRect.left;
+        var clickY = event.clientY - fvRect.top;
+
+        // 画像の中心がクリック位置になるように調整
+        var left = clickX - newImg.width / 2;
+        var top = clickY - newImg.height / 2;
+
+        // fv領域からはみ出さないように制御
+        left = Math.max(0, Math.min(left, fvRect.width - newImg.width));
+        top = Math.max(0, Math.min(top, fvRect.height - newImg.height));
 
         // 画像が画面外に出ないように調整
-        left = Math.max(0, Math.min(left, window.innerWidth - newImg.width));
-        top = Math.max(0, Math.min(top, window.innerHeight - newImg.height));
+        // left = Math.max(0, Math.min(left, window.innerWidth - newImg.width));
+        // top = Math.max(0, Math.min(top, window.innerHeight - newImg.height));
 
         // 画像の位置を設定
         newImg.style.left = `${left}px`;
         newImg.style.top = `${top}px`;
 
+        // 画像をfvセクションに追加
+        var fvSection = document.getElementById("fv");
+        if (fvSection) {
+            fvSection.appendChild(newImg);
+        }
+
         // 画像をbodyに追加
-        document.body.appendChild(newImg);
+        // document.parentnode.appendChild(newImg);
 
         // 画像をimagesListに追加
         imagesList.push(newImg);

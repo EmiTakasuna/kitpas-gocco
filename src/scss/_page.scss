@@ -554,7 +554,7 @@ body {
             width: 3.75vw;
             @include base.media-sp {
                 top: 8.7vw;
-                left: 196vw;
+                left: 58vw;
                 width: 6.4vw;
             }
         }
@@ -878,14 +878,14 @@ body {
                             font-size: 3.1vw;
                             width: 57.5vw;
                         }
-                        span {
-                            font-size: 0.9vw;
-                            font-weight: 400;
-                            @include base.media-sp {
-                                font-size: 3.1vw;
-                                font-weight: 400;
-                            }
-                        }
+                        // span {
+                        //     font-size: 0.9vw;
+                        //     font-weight: 400;
+                        //     @include base.media-sp {
+                        //         font-size: 3.1vw;
+                        //         font-weight: 400;
+                        //     }
+                        // }
                     }
                 }
                 &--list:not(:last-of-type) {
