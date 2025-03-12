@@ -36,6 +36,9 @@
     <!--電話番号,メールアドレスのリンク変換防止-->
     <meta name="format-detection" content="email=no,telephone=no,address=no"/>
 
+    <!--Youtube API-->
+    <script src="https://www.youtube.com/iframe_api"></script>
+
     <!--GoogleFont-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -215,7 +218,10 @@
             <img src="assets/images/first-view/bg-shape02.svg" alt="四角のあしらい" class="fv__bg-shape02 show_pc">
             <img src="assets/images/first-view/bg-shape03.svg" alt="四角のあしらい" class="fv__bg-shape03 show_pc">
             <img src="assets/images/first-view/bg-shape04.svg" alt="四角のあしらい" class="fv__bg-shape04 show_pc">
-            <!---->
+            <!--動画のランダム表示-->
+            <!-- <div id="random_content">
+                <video class="fv-mv" src="assets/movies/fv_mv.mp4" loop playsinline autoplay muted></video>
+            </div> -->
             <video class="fv-mv" src="assets/movies/fv_mv.mp4" loop playsinline autoplay muted></video>
             <img src="assets/images/illust_girl01.svg" alt="上を指差す女の子" class="fv__illust fv_illust-girl">
             <div class="fv__text show_pc">
@@ -398,7 +404,15 @@
 
                 <div class="how-to-use__container">
                     <div class="how-to-use__container--movie">
-                        <img src="assets/movies/sample_movieimg.png" class="how-to-use__container--movie--item" loading="lazy">
+                        <!-- <img src="assets/movies/movie_thumbnail.png" class="how-to-use__container--movie--item js-movie movie-inner" loading="lazy" data-video="Z3qFVR1aRMc">
+                        <div id="js-player" class="how-to-use__container--movie--item movie-player"></div> -->
+                        
+                        <div class="movie-inner">
+                            <img class="how-to-use__container--movie--item thumb js-movie" src="assets/movies/movie_thumbnail.png" alt="Youtubeサムネイル" data-video="5mdOO9iNc-A">
+                        </div>
+                        <div  class="video_container">
+                            <div id="js-player" class="movie-player"></div>
+                        </div>
                         <div class="how-to-use__container--movie--rectangle01"></div>
                         <div class="how-to-use__container--movie--rectangle02"></div>
                     </div>
@@ -427,7 +441,7 @@
                                     <span>4</span>
                                 </div>
                                 <!-- <p>余分なインクを落とし、ベビーパウダーを塗布<br class="show_pc">したら完成！</p> -->
-                                <p>完成！<span>（肌へプリントする場合は余分なインクを落とし、<br class="show_pc">ベビーパウダーを塗布すると擦っても落ちにくくなります。）</span></p>
+                                <p>完成！<br><span>（肌へプリントする場合は余分なインクを落とし、<br class="show_pc">ベビーパウダーを塗布すると擦っても落ちにくくなります。）</span></p>
                             </li>
                             <li class="how-to-use__container--order--container--list">
                                 <div class="how-to-use__container--order--container--list--number">
@@ -1011,6 +1025,8 @@
 <script src="assets/js/loading.js" async></script>
 <script src="assets/js/animation.js" async></script>
 <script src="assets/js/stamp.js" async></script>
+<script src="assets/js/stamp.js" async></script>
+<script src="assets/js/youtube-thumbnail.js" async></script>
 <!--SNSシェア用-->
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v22.0"></script>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -1042,7 +1058,7 @@
                     </a>
                 </div>
                 <div class="share__btn--share--sns--icon sink">
-                    <a href="https://twitter.com/intent/tweet?url=https://www.riso.co.jp/learn/risoart/lp/kitpasgocco/index.html&text=キットパスゴッコで遊ぼう！" data-url="https://www.riso.co.jp/product/lp/education/investigation/index.php" data-via="risokagaku_ssp" data-hashtags="kitpasgocco" data-show-count="false" data-text="キットパスゴッコで遊ぼう!" data-lang="ja" target="_blank">
+                    <a href="https://twitter.com/intent/tweet?url=https://www.riso.co.jp/learn/risoart/lp/kitpasgocco/index.html&text=キットパスゴッコで遊ぼう！" data-url="https://www.riso.co.jp/learn/risoart/lp/kitpasgocco/index.html" data-via="risokagaku_ssp" data-hashtags="kitpasgocco" data-show-count="false" data-text="キットパスゴッコで遊ぼう!" data-lang="ja" target="_blank">
                         <img src="assets/images/footer/x_beige.svg" alt="Xのアイコン" loading="lazy">
                     </a>
                 </div>

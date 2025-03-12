@@ -555,7 +555,7 @@ body {
             @include base.media-sp {
                 top: 8.7vw;
                 left: 58vw;
-                width: 6.4vw;
+                width: 8vw;
             }
         }
 
@@ -801,20 +801,23 @@ body {
         }
         &--movie {
             position: relative;
-            width: fit-content;
-            height: fit-content;
+            // width: fit-content;
+            // height: fit-content;
             border-radius: 0.7vw;
             background-color: color.$white;
             box-shadow: 0.5vw 0.5vw 0 0 color.$drop-shadow;
             padding: 4vw;
+            width: 48.1vw;
+            height: 30.4vw;
             @include base.media-sp {
                 flex-direction: column;
-                height: fit-content;
+                width: 89.7vw;
+                height: 56.7vw;
                 padding: 7.4vw;
             }
             &--item {
-                width: 40vw;
-                height: 22vw;
+                width: 40.1vw;
+                height: 22.6vw;
                 @include base.media-sp {
                     width:74.9vw;
                     height: 42.1vw;
@@ -878,14 +881,14 @@ body {
                             font-size: 3.1vw;
                             width: 57.5vw;
                         }
-                        // span {
-                        //     font-size: 0.9vw;
-                        //     font-weight: 400;
-                        //     @include base.media-sp {
-                        //         font-size: 3.1vw;
-                        //         font-weight: 400;
-                        //     }
-                        // }
+                        span {
+                            font-size: 0.9vw;
+                            font-weight: 400;
+                            @include base.media-sp {
+                                font-size: 3.1vw;
+                                font-weight: 400;
+                            }
+                        }
                     }
                 }
                 &--list:not(:last-of-type) {
@@ -900,6 +903,34 @@ body {
             }
         }
     }
+}
+.movie-inner {
+    display: block;
+    position: absolute;
+    // top: 3.84vw;設定するとずれてしまう
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+.movie-player {
+    position: relative;
+    z-index: 10;
+    border-radius: 0.7vw;
+}
+
+//Youtubeの黒い枠線を無くす
+.video_container{
+position: relative;
+padding-bottom: 56.25%;
+height: 0;
+overflow: hidden;
+}
+.video_container iframe {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
 }
 
 /* shopping * *********************************** */
