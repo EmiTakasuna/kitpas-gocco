@@ -34,6 +34,8 @@
     <link rel="icon" href="/favicon.ico" type="image/vnd.microsoft.icon">
     <!-- ICON-->
     <link rel="apple-touch-icon" sizes="180x180" href="<?php echo $documentRoot; ?>/assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="<?php echo $documentRoot; ?>/assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="<?php echo $documentRoot; ?>/assets/favicon/favicon-16x16.png">
     <link rel="manifest" href="<?php echo $documentRoot; ?>/assets/favicon/site.webmanifest" crossorigin="use-credentials">
     <link rel="mask-icon" href="<?php echo $documentRoot; ?>/assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
@@ -410,7 +412,8 @@
                         <div id="js-player" class="how-to-use__container--movie--item movie-player"></div> -->
                         
                         <div class="movie-inner">
-                            <img class="how-to-use__container--movie--item thumb js-movie" src="assets/movies/movie_thumbnail.png" alt="Youtubeサムネイル" data-video="5mdOO9iNc-A">
+                            <img class="how-to-use__container--movie--item thumb js-movie" src="assets/movies/movie_thumbnail.png" alt="Youtubeサムネイル" data-video="5mdOO9iNc-A?rel=0">
+                            <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/5mdOO9iNc-A?loop=1&playlist=5mdOO9iNc-A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
                         </div>
                         <div  class="video_container">
                             <div id="js-player" class="movie-player"></div>

@@ -5,16 +5,26 @@ document.querySelectorAll('.js-movie').forEach(function(element) {
       var player = new YT.Player('js-player', {
         height: '100%',
         width: '100%',
-        playerVars: {
-          autoplay: 1,
-          rel: 0,
-          playsinline: 1
+        videoId: youtubeId,
+        events: {
+          'onReady': function(evt) {
+            evt.target.mute();
+            evt.target.playVideo();
+          },
+          'onStateChange': function(evt) {
+            switch (evt.data) {
+              case YT.PlayerState.ENDED:
+                evt.target.playVideo();
+                break;
+            }
+          }
         },
-        videoId: youtubeId
+        playerVars: {
+          playsinline: 1,
+        }
       });
       document.querySelectorAll('.js-movie').forEach(function(movie) {
         movie.style.display = 'none';
       });
     });
   });
-  
