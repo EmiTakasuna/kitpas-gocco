@@ -77,6 +77,12 @@ $break-point: 750px;
     @content;
     }
 }
+$break-point2: 375px;
+@mixin media-sp2 {
+    @media screen and (max-width: $break-point2) and (orientation: portrait)  {
+    @content;
+    }
+}
 @mixin media-landscape {
     @media screen and (max-width: $break-point) and (orientation: landscape)  {
     @content;

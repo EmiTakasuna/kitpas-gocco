@@ -722,6 +722,11 @@ body {
     max-width: 85px;
   }
 }
+@media screen and (max-width: 375px) and (orientation: portrait) {
+  .fv__illust {
+    width: 15.2vw;
+  }
+}
 
 .fv-mv {
   -o-object-fit: cover;
@@ -845,6 +850,12 @@ body {
     right: 33.5vw;
   }
 }
+@media screen and (max-width: 375px) and (orientation: portrait) {
+  .fv__balloon {
+    bottom: 17.5vw;
+    right: 33.5vw;
+  }
+}
 .fv__balloon--container {
   position: relative;
   text-align: center;
@@ -858,9 +869,15 @@ body {
     width: 33.8vw;
   }
 }
+@media screen and (max-width: 375px) and (orientation: portrait) {
+  .fv__balloon--container--img {
+    transform: scaleX(-1);
+    width: 31.8vw;
+  }
+}
 .fv__balloon--container--text {
   position: absolute;
-  top: 1.3vw;
+  top: 1.2vw;
   left: 2.5vw;
   font-family: "Zen Maru Gothic", serif;
   font-size: 0.8vw;
@@ -874,6 +891,11 @@ body {
     left: 8.2vw;
     font-size: 2.8vw;
     line-height: 1.4;
+  }
+}
+@media screen and (max-width: 375px) and (orientation: portrait) {
+  .fv__balloon--container--text {
+    font-size: 2.5vw;
   }
 }
 .fv__balloon--container--text span {
@@ -3540,7 +3562,7 @@ small {
   content: none;
 }
 
-/* スクロールしたらヘッダーメニューのフォントカラー変更 */
+/* スクロールしたらフッターで追従ボタン非表示 */
 .js-follow-cvbtn {
   display: none;
 }
@@ -4014,6 +4036,11 @@ small {
     width: 72.3vw;
   }
 }
+@media screen and (max-width: 375px) and (orientation: portrait) {
+  .fv__animation--flex {
+    width: 67.3vw;
+  }
+}
 .fv__animation--flex--container {
   position: relative;
   width: 33%;
@@ -4031,6 +4058,12 @@ small {
     max-width: 30vw;
   }
 }
+@media screen and (max-width: 375px) and (orientation: portrait) {
+  .fv__animation--flex--container--shape01 {
+    width: 81%;
+    max-width: 30vw;
+  }
+}
 .fv__animation--flex--container--shape02 {
   position: absolute;
   top: 0;
@@ -4043,6 +4076,12 @@ small {
     max-width: 30.8vw;
   }
 }
+@media screen and (max-width: 375px) and (orientation: portrait) {
+  .fv__animation--flex--container--shape02 {
+    width: 90%;
+    max-width: 30.8vw;
+  }
+}
 .fv__animation--flex--container--shape03 {
   position: absolute;
   top: 0;
@@ -4052,6 +4091,12 @@ small {
 @media screen and (max-width: 750px) and (orientation: portrait) {
   .fv__animation--flex--container--shape03 {
     width: 93%;
+    max-width: 30.5vw;
+  }
+}
+@media screen and (max-width: 375px) and (orientation: portrait) {
+  .fv__animation--flex--container--shape03 {
+    width: 88%;
     max-width: 30.5vw;
   }
 }
@@ -4069,6 +4114,14 @@ small {
     max-width: 48.7vw;
   }
 }
+@media screen and (max-width: 375px) and (orientation: portrait) {
+  .fv__animation--flex--container--shape04 {
+    top: 1.5vw;
+    left: 0.4vw;
+    width: 66%;
+    max-width: 48.7vw;
+  }
+}
 .fv__animation--flex--container--shape05 {
   position: absolute;
   top: 0;
@@ -4079,6 +4132,13 @@ small {
   .fv__animation--flex--container--shape05 {
     top: 2.6vw;
     width: 95%;
+    max-width: 30.8vw;
+  }
+}
+@media screen and (max-width: 375px) and (orientation: portrait) {
+  .fv__animation--flex--container--shape05 {
+    top: 2.6vw;
+    width: 90%;
     max-width: 30.8vw;
   }
 }
@@ -4096,6 +4156,14 @@ small {
     max-width: 27.7vw;
   }
 }
+@media screen and (max-width: 375px) and (orientation: portrait) {
+  .fv__animation--flex--container--shape06 {
+    top: 2.3vw;
+    left: 1.8vw;
+    width: 80%;
+    max-width: 27.7vw;
+  }
+}
 .fv__animation--flex--container--shape07 {
   position: absolute;
   top: 0.7vw;
@@ -4106,6 +4174,13 @@ small {
   .fv__animation--flex--container--shape07 {
     left: 2.1vw;
     width: 60%;
+    max-width: 19.7vw;
+  }
+}
+@media screen and (max-width: 375px) and (orientation: portrait) {
+  .fv__animation--flex--container--shape07 {
+    left: 2.1vw;
+    width: 55%;
     max-width: 19.7vw;
   }
 }
@@ -4122,6 +4197,13 @@ small {
     max-width: 31.5vw;
   }
 }
+@media screen and (max-width: 375px) and (orientation: portrait) {
+  .fv__animation--flex--container--shape08 {
+    left: -1.1vw;
+    width: 91%;
+    max-width: 31.5vw;
+  }
+}
 .fv__animation--flex--container--shape09 {
   position: absolute;
   top: 0;
@@ -4131,6 +4213,12 @@ small {
 @media screen and (max-width: 750px) and (orientation: portrait) {
   .fv__animation--flex--container--shape09 {
     width: 90%;
+    max-width: 29.5vw;
+  }
+}
+@media screen and (max-width: 375px) and (orientation: portrait) {
+  .fv__animation--flex--container--shape09 {
+    width: 85%;
     max-width: 29.5vw;
   }
 }
@@ -4149,6 +4237,11 @@ small {
     max-width: 18.7vw;
   }
 }
+@media screen and (max-width: 375px) and (orientation: portrait) {
+  .fv__animation--flex--container--illust01 {
+    width: 52%;
+  }
+}
 .fv__animation--flex--container--illust02 {
   position: absolute;
   top: 0.9vw;
@@ -4162,6 +4255,11 @@ small {
     left: 6.4vw;
     width: 36%;
     max-width: 11.8vw;
+  }
+}
+@media screen and (max-width: 375px) and (orientation: portrait) {
+  .fv__animation--flex--container--illust02 {
+    width: 34%;
   }
 }
 .fv__animation--flex--container--illust03 {
@@ -4179,6 +4277,12 @@ small {
     max-width: 17.7vw;
   }
 }
+@media screen and (max-width: 375px) and (orientation: portrait) {
+  .fv__animation--flex--container--illust03 {
+    left: 8vw;
+    width: 49%;
+  }
+}
 .fv__animation--flex--container--illust04 {
   position: absolute;
   top: 0.3vw;
@@ -4192,6 +4296,11 @@ small {
     left: 4.6vw;
     width: 32%;
     max-width: 8.5vw;
+  }
+}
+@media screen and (max-width: 375px) and (orientation: portrait) {
+  .fv__animation--flex--container--illust04 {
+    width: 30%;
   }
 }
 .fv__animation--flex--container--illust05 {
@@ -4209,6 +4318,11 @@ small {
     max-width: 14.3vw;
   }
 }
+@media screen and (max-width: 375px) and (orientation: portrait) {
+  .fv__animation--flex--container--illust05 {
+    width: 40%;
+  }
+}
 .fv__animation--flex--container--illust06 {
   position: absolute;
   top: 2.3vw;
@@ -4222,6 +4336,13 @@ small {
     left: 9.2vw;
     width: 27%;
     max-width: 18.8vw;
+  }
+}
+@media screen and (max-width: 375px) and (orientation: portrait) {
+  .fv__animation--flex--container--illust06 {
+    top: 6vw;
+    left: 8.5vw;
+    width: 25%;
   }
 }
 .fv__animation--flex--container--illust07 {
@@ -4239,6 +4360,11 @@ small {
     max-width: 19vw;
   }
 }
+@media screen and (max-width: 375px) and (orientation: portrait) {
+  .fv__animation--flex--container--illust07 {
+    top: 2.5vw;
+  }
+}
 .fv__animation--flex--container--illust08 {
   position: absolute;
   top: 1.7vw;
@@ -4254,9 +4380,15 @@ small {
     max-width: 19vw;
   }
 }
+@media screen and (max-width: 375px) and (orientation: portrait) {
+  .fv__animation--flex--container--illust08 {
+    left: 3.5vw;
+    width: 53%;
+  }
+}
 .fv__animation--flex--container--illust09 {
   position: absolute;
-  top: 0;
+  top: 0.3vw;
   left: 0;
   z-index: 1;
   width: 7.6vw;
@@ -4269,6 +4401,11 @@ small {
     max-width: 25.9vw;
   }
 }
+@media screen and (max-width: 375px) and (orientation: portrait) {
+  .fv__animation--flex--container--illust09 {
+    width: 83%;
+  }
+}
 
 .mt-2line01 {
   margin-top: 10vw;
@@ -4278,6 +4415,11 @@ small {
     margin-top: 25.6vw;
   }
 }
+@media screen and (max-width: 375px) and (orientation: portrait) {
+  .mt-2line01 {
+    margin-top: 23.6vw;
+  }
+}
 
 .mt-2line02 {
   margin-top: 11vw;
@@ -4285,6 +4427,11 @@ small {
 @media screen and (max-width: 750px) and (orientation: portrait) {
   .mt-2line02 {
     margin-top: 27.7vw;
+  }
+}
+@media screen and (max-width: 375px) and (orientation: portrait) {
+  .mt-2line02 {
+    margin-top: 25.7vw;
   }
 }
 
@@ -4297,6 +4444,11 @@ small {
     margin-top: 28.5vw;
   }
 }
+@media screen and (max-width: 375px) and (orientation: portrait) {
+  .mt-2line03 {
+    margin-top: 26.5vw;
+  }
+}
 
 .mt-3line01 {
   margin-top: 9vw;
@@ -4304,6 +4456,12 @@ small {
 @media screen and (max-width: 750px) and (orientation: portrait) {
   .mt-3line01 {
     margin-top: 26.2vw;
+    margin-left: 0.2vw;
+  }
+}
+@media screen and (max-width: 375px) and (orientation: portrait) {
+  .mt-3line01 {
+    margin-top: 24.2vw;
     margin-left: 0.2vw;
   }
 }
@@ -4316,6 +4474,11 @@ small {
     margin-top: 26.7vw;
   }
 }
+@media screen and (max-width: 375px) and (orientation: portrait) {
+  .mt-3line02 {
+    margin-top: 24.7vw;
+  }
+}
 
 .mt-3line03 {
   margin-top: 9vw;
@@ -4323,6 +4486,11 @@ small {
 @media screen and (max-width: 750px) and (orientation: portrait) {
   .mt-3line03 {
     margin-top: 26.1vw;
+  }
+}
+@media screen and (max-width: 375px) and (orientation: portrait) {
+  .mt-3line03 {
+    margin-top: 24.1vw;
   }
 }
 

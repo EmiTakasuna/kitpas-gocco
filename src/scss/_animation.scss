@@ -22,6 +22,9 @@
                 // width: 286px;
                 width: 72.3vw;
             }
+            @include base.media-sp2 {
+                width: 67.3vw;
+            }
             &--container {
                 position: relative;
                 width: 33%;
@@ -36,6 +39,10 @@
                         width: 86%;
                         max-width: 30vw;
                     }
+                    @include base.media-sp2 {
+                        width: 81%;
+                        max-width: 30vw;
+                    }
                 }
                 &--shape02 {
                     position: absolute;
@@ -48,6 +55,10 @@
                         width: 95%;
                         max-width: 30.8vw;
                     }
+                    @include base.media-sp2 {
+                        width: 90%;
+                        max-width: 30.8vw;
+                    }
                 }
                 &--shape03 {
                     position: absolute;
@@ -58,6 +69,10 @@
                         // width: 88px;
                         // width: 22.6vw;
                         width: 93%;
+                        max-width: 30.5vw;
+                    }
+                    @include base.media-sp2 {
+                        width: 88%;
                         max-width: 30.5vw;
                     }
                 }
@@ -74,6 +89,12 @@
                         width: 71%;
                         max-width: 48.7vw;
                     }
+                    @include base.media-sp2 {
+                        top: 1.5vw;
+                        left: 0.4vw;
+                        width: 66%;
+                        max-width: 48.7vw;
+                    }
                 }
                 &--shape05 {
                     position: absolute;
@@ -86,6 +107,11 @@
                         top: 2.6vw;
                         // width: 22.8vw;
                         width: 95%;
+                        max-width: 30.8vw;
+                    }
+                    @include base.media-sp2 {
+                        top: 2.6vw;
+                        width: 90%;
                         max-width: 30.8vw;
                     }
                 }
@@ -104,6 +130,12 @@
                         width: 85%;
                         max-width: 27.7vw;
                     }
+                    @include base.media-sp2 {
+                        top: 2.3vw;
+                        left: 1.8vw;
+                        width: 80%;
+                        max-width: 27.7vw;
+                    }
                 }
                 &--shape07 {
                     position: absolute;
@@ -116,6 +148,11 @@
                         left: 2.1vw;
                         // width: 14.6vw;
                         width: 60%;
+                        max-width: 19.7vw;
+                    }
+                    @include base.media-sp2 {
+                        left: 2.1vw;
+                        width: 55%;
                         max-width: 19.7vw;
                     }
                 }
@@ -132,6 +169,11 @@
                         width: 96%;
                         max-width: 31.5vw;
                     }
+                    @include base.media-sp2 {
+                        left: -1.1vw;
+                        width: 91%;
+                        max-width: 31.5vw;
+                    }
                 }
                 &--shape09 {
                     position: absolute;
@@ -142,6 +184,10 @@
                         // width: 85px;
                         // width: 21.8vw;
                         width: 90%;
+                        max-width: 29.5vw;
+                    }
+                    @include base.media-sp2 {
+                        width: 85%;
                         max-width: 29.5vw;
                     }
                 }
@@ -162,6 +208,9 @@
                         width: 57%;
                         max-width: 18.7vw;
                     }
+                    @include base.media-sp2 {
+                        width: 52%;
+                    }
                 }
                 &--illust02 {
                     position: absolute;
@@ -178,6 +227,9 @@
                         // width: 8.7vw;
                         width: 36%;
                         max-width: 11.8vw;
+                    }
+                    @include base.media-sp2 {
+                        width: 34%;
                     }
                 }
                 &--illust03 {
@@ -196,6 +248,10 @@
                         width: 54%;
                         max-width: 17.7vw;
                     }
+                    @include base.media-sp2 {
+                        left: 8vw;
+                        width: 49%;
+                    }
                 }
                 &--illust04 {
                     position: absolute;
@@ -204,14 +260,13 @@
                     z-index: 1;
                     width: 3vw;
                     @include base.media-sp {
-                        // top: 11px;
-                        // left: 22px;
-                        // width: 31px;
                         top: 3.8vw;
                         left: 4.6vw;
-                        // width: 7.9vw;
                         width: 32%;
                         max-width: 8.5vw;
+                    }
+                    @include base.media-sp2 {
+                        width: 30%;
                     }
                 }
                 &--illust05 {
@@ -230,6 +285,9 @@
                         width: 43%;
                         max-width: 14.3vw;
                     }
+                    @include base.media-sp2 {
+                        width: 40%;
+                    }
                 }
                 &--illust06 {
                     position: absolute;
@@ -246,6 +304,11 @@
                         // width: 6.2vw;
                         width: 27%;
                         max-width: 18.8vw;
+                    }
+                    @include base.media-sp2 {
+                        top: 6vw;
+                        left: 8.5vw;
+                        width: 25%;
                     }
                 }
                 &--illust07 {
@@ -264,6 +327,9 @@
                         width: 13%;
                         max-width: 19vw;
                     }
+                    @include base.media-sp2 {
+                        top: 2.5vw;
+                    }
                 }
                 &--illust08 {
                     position: absolute;
@@ -281,10 +347,14 @@
                         width: 58%;
                         max-width: 19vw;
                     }
+                    @include base.media-sp2 {
+                        left: 3.5vw;
+                        width: 53%;
+                    }
                 }
                 &--illust09 {
                     position: absolute;
-                    top: 0;
+                    top: 0.3vw;
                     left: 0;
                     z-index: 1;
                     width: 7.6vw;
@@ -298,6 +368,9 @@
                         width: 88%;
                         max-width: 25.9vw;
                     }
+                    @include base.media-sp2 {
+                        width: 83%;
+                    }
                 }
             }
             
@@ -310,12 +383,18 @@
         // margin-top: 100px;
         margin-top: 25.6vw;
     }
+    @include base.media-sp2 {
+        margin-top: 23.6vw;
+    }
 }
 .mt-2line02 {
     margin-top: 11vw;
     @include base.media-sp {
         // margin-top: 108px;
         margin-top: 27.7vw;
+    }
+    @include base.media-sp2 {
+        margin-top: 25.7vw;
     }
 }
 .mt-2line03 {
@@ -325,12 +404,19 @@
         // margin-top: 111px;
         margin-top: 28.5vw;
     }
+    @include base.media-sp2 {
+        margin-top: 26.5vw;
+    }
 }
 .mt-3line01 {
     margin-top: 9vw;
     @include base.media-sp {
         // margin-top: 102px;
         margin-top: 26.2vw;
+        margin-left: 0.2vw;
+    }
+    @include base.media-sp2 {
+        margin-top: 24.2vw;
         margin-left: 0.2vw;
     }
 }
@@ -340,12 +426,18 @@
         // margin-top: 104px;
         margin-top: 26.7vw;
     }
+    @include base.media-sp2 {
+        margin-top: 24.7vw;
+    }
 }
 .mt-3line03 {
     margin-top: 9vw;
     @include base.media-sp {
         // margin-top: 102px;
         margin-top: 26.1vw;
+    }
+    @include base.media-sp2 {
+        margin-top: 24.1vw;
     }
 }
 

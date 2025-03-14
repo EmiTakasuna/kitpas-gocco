@@ -62,6 +62,9 @@ body {
             width: 16.2vw;
             max-width: 85px;
         }
+        @include base.media-sp2 {
+            width: 15.2vw;
+        }
     }
 }
 .fv-mv {
@@ -173,6 +176,10 @@ body {
         bottom: 22.5vw;
         right: 33.5vw;
     }
+    @include base.media-sp2 {
+        bottom: 17.5vw;
+        right: 33.5vw;
+    }
     &--container {
         position: relative;
         text-align: center;
@@ -182,10 +189,14 @@ body {
                 transform: scaleX(-1);//左右反転
                 width: 33.8vw;
             }
+            @include base.media-sp2 {
+                transform: scaleX(-1);//左右反転
+                width: 31.8vw;
+            }
         }
         &--text {
             position: absolute;
-            top: 1.3vw;
+            top: 1.2vw;
             left: 2.5vw;
             font-family: "Zen Maru Gothic", serif;
             font-size: 0.8vw;
@@ -197,6 +208,9 @@ body {
                 left: 8.2vw;
                 font-size: 2.8vw;
                 line-height: 1.4;
+            }
+            @include  base.media-sp2 {
+                font-size: 2.5vw;
             }
             span {
                 line-height: 1;

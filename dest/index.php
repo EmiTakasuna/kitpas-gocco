@@ -1,5 +1,138 @@
-<%- include('./_components/_head.ejs');%>
-<%- include('./_components/_header.ejs');%>
+<!DOCTYPE html>
+<html lang="ja">
+<head prefix="og: https://ogp.me/ns#">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>キットパスゴッコ特設サイト｜RISO</title>
+    <meta name="description" content="「キットパスゴッコ」は、肌にやさしいインクとデザイン付き専用スクリーンを使ってボディペイントなどが楽しめるプリントキットです。"/>
+    
+    <!--GTM-->
+    <?php include($_SERVER['DOCUMENT_ROOT'] . '/common/renew_files/inc/tag-gtm_h.html') ?>
+    <!-- ↓↓↓ Twitter -->
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:site" content="@risokagaku_ssp"/>
+    <meta name="twitter:title" content="キットパスゴッコ特設サイト｜RISO"/>
+    <meta name="twitter:description" content="「キットパスゴッコ」は、肌にやさしいインクとデザイン付き専用スクリーンを使ってボディペイントなどが楽しめるプリントキットです。" />
+    <meta name="twitter:image" content="assets/images/ogp.png" />
+    <meta name="twitter:url" content="https://www.riso.co.jp/learn/risoart/lp/kitpasgocco/index.php" />
+    <!-- ↑↑↑ Twitter -->
+
+    <!-- ↓↓↓ og -->
+    <meta property="og:title" content="キットパスゴッコ特設サイト｜RISO">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.riso.co.jp/learn/risoart/lp/kitpasgocco/index.php">
+    <meta property="og:image" content="/assets/images/ogp.png">
+    <meta property="og:site_name" content="理想科学工業株式会社｜RISO">
+    <meta property="og:description" content="「キットパスゴッコ」は、肌にやさしいインクとデザイン付き専用スクリーンを使ってボディペイントなどが楽しめるプリントキットです。">
+    <meta property="og:locale" content="ja_JP"/>
+    <!-- ↑↑↑ og -->
+
+    <!--IEに対して互換性のモードを指定-->
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+
+    <!--サイトアイコン-->
+    <link rel="icon" href="/favicon.ico" type="image/vnd.microsoft.icon">
+    <!-- ICON-->
+    <link rel="apple-touch-icon" sizes="180x180" href="<?php echo $documentRoot; ?>/assets/favicon/apple-touch-icon.png">
+    <link rel="manifest" href="<?php echo $documentRoot; ?>/assets/favicon/site.webmanifest" crossorigin="use-credentials">
+    <link rel="mask-icon" href="<?php echo $documentRoot; ?>/assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <!--電話番号,メールアドレスのリンク変換防止-->
+    <meta name="format-detection" content="email=no,telephone=no,address=no"/>
+
+    <!--Youtube API-->
+    <script src="https://www.youtube.com/iframe_api"></script>
+
+    <!--GoogleFont-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap" rel="stylesheet">
+
+    <!--css-->
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+
+    <!--slick-->
+    <link rel="stylesheet" href="css/slick/slick.css" type="text/css"/>
+    <link rel="stylesheet" href="css/slick/slick-theme.css" type="text/css"/>
+
+</head>
+<body  class="body">
+  <!--GTM-->
+  <?php include($_SERVER['DOCUMENT_ROOT'] . '/common/renew_files/inc/tag-gtm_b.html') ?>
+
+  <div class="bg-white">
+
+    <header>
+        <div class="wrapper">
+          <!--ロゴ-->
+          <h1>
+            <img src="assets/images/logo.svg" alt="かんたんプリントでアートをもっと自由に「キットパスゴッコ」" class="header__logo">
+          </h1>
+        </div>
+
+        <div class="wrapper__fixed fixed-header">
+          <div class="wrapper__menu">
+            <!--ハンバーガーメニュー-->
+            <div class="hamburger-menu" id="hamburger-menu">
+
+              <input type="checkbox" id="hamburger-menu-btn-check">
+              <label for="hamburger-menu-btn-check" class="hamburger-menu-btn">
+                <!-- <img src="assets/images/menu-icon.svg"> -->
+                <span class="hamburger-menu__lines"></span>
+                <span class="hamburger-menu__heading show_pc">メニュー</span>
+              </label>
+              <nav class="hamburger-menu__content">
+                <div class="hamburger-menu__content-circle"></div>
+                <div class="hamburger-menu__content-circle2"></div>
+                <ul>
+                  <li>
+                    <img src="assets/images/menu-icon_star.svg" alt="星のイラスト">
+                    <a href="#concept">concept</a>
+                  </li>
+                  <li>
+                    <img src="assets/images/menu-icon_star.svg" alt="星のイラスト">
+                    <a href="#features">features</a>
+                  </li>
+                  <li>
+                    <img src="assets/images/menu-icon_star.svg" alt="星のイラスト">
+                    <a href="#how-to-use" class="no-wrap">how to use</a>
+                  </li>
+                  <li>
+                    <img src="assets/images/menu-icon_star.svg" alt="星のイラスト">
+                    <a href="#shopping" class="no-wrap">shopping</a>
+                  </li>
+                  <li>
+                    <img src="assets/images/menu-icon_star.svg" alt="星のイラスト">
+                    <a href="#scenes" class="no-wrap">scenes</a>
+                  </li>
+                  <li>
+                    <img src="assets/images/menu-icon_star.svg" alt="星のイラスト">
+                    <a href="#voices">voices</a>
+                  </li>
+                  <li>
+                    <img src="assets/images/menu-icon_star.svg" alt="星のイラスト">
+                    <a href="#faq">faq</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+
+            <!--購入カート-->
+            <div class="shopping-cart">
+              <a href="https://store.shopping.yahoo.co.jp/riso-screen/2044.html" target="_blank">
+                <img src="assets/images/shopping-cart.svg" alt="商品一覧へリンクするカートアイコン">
+              </a>
+            </div>
+          </div>
+        </div>
+
+  </header>
 
         <!--ローディング-->
         <div class="loader">
@@ -127,7 +260,17 @@
 
 
 <main class="main" role="main">
-    <%- include('./_components/_follow-cvbtn.ejs');%>
+    <button class="follow-cvbtn js-follow-cvbtn">
+    <a href="https://store.shopping.yahoo.co.jp/riso-screen/2044.html" class="follow-cvbtn__link" target="_blank">
+        <div class="follow-cvbtn__link--text">
+            <hr class="follow-cvbtn__link--text--line01">
+            <p>ご購入は<br>こちらから</p>
+            <hr class="follow-cvbtn__link--text--line02">
+        </div>
+        <div class="follow-cvbtn__link--switch"></div>
+    </a>
+    
+</button>
     <!--concept-->
     <section class="concept section" id="concept">
         <img src="assets/images/concept/bg-shape01.svg" alt="四角のあしらい" class="concept__bg-shape01" loading="lazy">
@@ -894,4 +1037,72 @@
 
 
 </body>
-<%- include('./_components/_footer.ejs');%>
+
+<div class="wrapper footer__flex">
+    <img src="assets/images/logo.svg" alt="かんたんプリントでアートをもっと自由に「キットパスゴッコ」" class="share__logo">
+    <div class="share__btn">
+        <div class="share__btn--share">
+            <div class="share__btn--share--text">
+                <div class="share__btn--share--text--item">
+                    <div class="balloon">
+                        <img src="assets/images/footer/balloon.svg" class="balloon-img" alt="吹き出し" loading="lazy">
+                    </div>
+                    <div class="share__btn--share--text--item--balloon">
+                        <p>SNSでシェア</p>
+                        <img src="assets/images/footer/exclamation-mark.svg" class="share__btn--share--text--item--img" alt="びっくりマーク" loading="lazy">
+                    </div>
+                </div>
+            </div>
+            <div class="share__btn--share--sns">
+                <div class="share__btn--share--sns--icon sink" data-href="https://www.riso.co.jp/product/lp/education/investigation/index.php" data-layout="" data-size="">
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.riso.co.jp%2Fproduct%2Flp%2Feducation%2Finvestigation%2Findex.php&amp;src=sdkpreparse" target="_blank">
+                        <img src="assets/images/footer/facebook_beige.svg" alt="facebookのアイコン" loading="lazy">
+                    </a>
+                </div>
+                <div class="share__btn--share--sns--icon sink">
+                    <a href="https://twitter.com/intent/tweet?url=https://www.riso.co.jp/learn/risoart/lp/kitpasgocco/index.php&text=キットパスゴッコで遊ぼう！" data-url="https://www.riso.co.jp/learn/risoart/lp/kitpasgocco/index.php" data-via="risokagaku_ssp" data-hashtags="kitpasgocco" data-show-count="false" data-text="キットパスゴッコで遊ぼう!" data-lang="ja" target="_blank">
+                        <img src="assets/images/footer/x_beige.svg" alt="Xのアイコン" loading="lazy">
+                    </a>
+                </div>
+            </div>
+            <button class="share__btn--share--pagetopbtn sink">
+                <a href="#">
+                    <img src="assets/images/footer/page-top.svg">
+                    <span>ページトップへ戻る</span>
+                </a>
+            </button>
+        </div>
+    </div>
+</div>
+<footer class="footer">
+    <div class="wrapper js-footer_btn-hidden">
+        <div class="footer__nav">
+            <ol class="footer__nav--sitemap">
+                <li>
+                  <a href="https://www.riso.co.jp/form/kitpasgocco/contact/index.php" target="_blank">お問い合わせ</a>
+                </li>
+                <li>
+                  <a href="https://www.riso.co.jp/company/privacy.html" target="_blank">プライバシー</a>
+                </li>
+                <li>
+                  <a href="https://www.riso.co.jp/company/use.html" target="_blank" class="no-wrap">サイトポリシー</a>
+                </li>
+                <li>
+                  <a href="https://www.riso.co.jp/company/smpolicy.html" target="_blank">ソーシャルメディアポリシー</a>
+                </li>
+            </ol>
+            <ol class="footer__nav--sns">
+                <span>シルクスクリーン関連<br class="show_pc">公式アカウント一覧</span>
+                <div class="footer__nav--sns--icon">
+                    <li><a href="https://www.facebook.com/risokagaku.ssprint/" target="_blank"><img src="assets/images/footer/facebook_gray.svg" alt="facebookのアイコン" loading="lazy"></a></li>
+                    <li><a href="https://twitter.com/risokagaku_ssp" target="_blank"><img src="assets/images/footer/x_gray.svg"alt="Xのアイコン" loading="lazy"></a></li>
+                    <!-- <li><a href="https://www.youtube.com/@risochannel" target="_blank"><img src="assets/images/footer/youtube_gray.svg" alt="YouTubeのアイコン" loading="lazy"></a></li> -->
+                    <li><a href="https://www.instagram.com/riso_silkscreen" target="_blank"><img src="assets/images/footer/instagram_gray.svg" alt="Instagramのアイコン" loading="lazy"></a></li>
+                </div>
+            </ol>
+        </div>
+    </div>
+    <small>Copyright <script type="text/javascript">myDate = new Date() ;myYear = myDate.getFullYear ();document.write(myYear);</script> RISO KAGAKU CORPORATION. All Rights Reserved.</small>
+
+
+</footer>
