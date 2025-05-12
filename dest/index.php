@@ -3,27 +3,27 @@
 <head prefix="og: https://ogp.me/ns#">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>キットパス×ゴッコ特設サイト｜RISO</title>
-    <meta name="description" content="キットパス×ゴッコは、肌にやさしいインクとデザイン付き専用スクリーンを使ってボディペイントなどが楽しめるプリントキットです。"/>
+    <title>キットパス×ゴッコ特設サイト｜RISO</title>
+    <meta name="description" content="キットパス×ゴッコは、肌にやさしいインクとデザイン付き専用スクリーンを使ってボディペイントなどが楽しめるプリントキットです。"/>
     
     <!--GTM-->
     <?php include($_SERVER['DOCUMENT_ROOT'] . '/common/renew_files/inc/tag-gtm_h.html') ?>
     <!-- ↓↓↓ Twitter -->
     <meta name="twitter:card" content="summary_large_image"/>
     <meta name="twitter:site" content="@risokagaku_ssp"/>
-    <meta name="twitter:title" content="キットパス×ゴッコ特設サイト｜RISO"/>
-    <meta name="twitter:description" content="キットパス×ゴッコは、肌にやさしいインクとデザイン付き専用スクリーンを使ってボディペイントなどが楽しめるプリントキットです。" />
+    <meta name="twitter:title" content="キットパス×ゴッコ特設サイト｜RISO"/>
+    <meta name="twitter:description" content="キットパス×ゴッコは、肌にやさしいインクとデザイン付き専用スクリーンを使ってボディペイントなどが楽しめるプリントキットです。" />
     <meta name="twitter:image" content="assets/images/ogp.png" />
     <meta name="twitter:url" content="https://www.riso.co.jp/learn/risoart/lp/kitpasgocco/index.php" />
     <!-- ↑↑↑ Twitter -->
 
     <!-- ↓↓↓ og -->
-    <meta property="og:title" content="キットパス×ゴッコ特設サイト｜RISO">
+    <meta property="og:title" content="キットパス×ゴッコ特設サイト｜RISO">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://www.riso.co.jp/learn/risoart/lp/kitpasgocco/index.php">
     <meta property="og:image" content="/assets/images/ogp.png">
     <meta property="og:site_name" content="理想科学工業株式会社｜RISO">
-    <meta property="og:description" content="キットパス×ゴッコは、肌にやさしいインクとデザイン付き専用スクリーンを使ってボディペイントなどが楽しめるプリントキットです。">
+    <meta property="og:description" content="キットパス×ゴッコは、肌にやさしいインクとデザイン付き専用スクリーンを使ってボディペイントなどが楽しめるプリントキットです。">
     <meta property="og:locale" content="ja_JP"/>
     <!-- ↑↑↑ og -->
 
@@ -47,6 +47,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300;400;500&display=swap" rel="stylesheet">
 
     <!--css-->
     <link rel="stylesheet" href="css/style.css" type="text/css">
@@ -66,7 +67,7 @@
         <div class="wrapper">
           <!--ロゴ-->
           <h1>
-            <img src="assets/images/logo.svg" alt="かんたんプリントでアートをもっと自由にキットパス×ゴッコ" class="header__logo">
+            <img src="assets/images/logo.svg" alt="かんたんプリントでアートをもっと自由にキットパス×ゴッコ" class="header__logo">
           </h1>
         </div>
 
@@ -180,7 +181,7 @@
                     </div>
                     <div class="fv__animation--flex--container">
                         <img src="assets/images/first-view/fv-animation_shape02.svg" class="fv__animation--flex--container--shape02 fv_shape" alt="アーチ型の窓のあしらい">
-                        <img src="assets/images/first-view/fv-animation_illust02.svg" class="fv__animation--flex--container--illust02 fv_illust" alt="キットパス×ゴッコでプリントしている男の子のイラスト">
+                        <img src="assets/images/first-view/fv-animation_illust02.svg" class="fv__animation--flex--container--illust02 fv_illust" alt="キットパス×ゴッコでプリントしている男の子のイラスト">
                     </div>
                     <div class="fv__animation--flex--container">
                         <img src="assets/images/first-view/fv-animation_shape03.svg" class="fv__animation--flex--container--shape03 fv_shape" alt="紺色の三角形あしらい">
@@ -192,7 +193,7 @@
                     </div>
                     <div class="fv__animation--flex--container mt-2line02">
                         <img src="assets/images/first-view/fv-animation_shape05.svg" class="fv__animation--flex--container--shape05 fv_shape" alt="赤い四角形のあしらい">
-                        <img src="assets/images/first-view/fv-animation_illust05.svg" class="fv__animation--flex--container--illust05 fv_illust" alt="キットパス×ゴッコでプリントしている女の子のイラスト">
+                        <img src="assets/images/first-view/fv-animation_illust05.svg" class="fv__animation--flex--container--illust05 fv_illust" alt="キットパス×ゴッコでプリントしている女の子のイラスト">
                     </div>
                     <div class="fv__animation--flex--container mt-2line03">
                         <img src="assets/images/first-view/fv-animation_shape06.svg" class="fv__animation--flex--container--shape06 fv_shape" alt="水色のひし形のあしらい">
@@ -280,7 +281,7 @@
         <div class="concept__container">
             <div class="concept__container--text">
                 <img src="assets/images/concept/concept_illust1.svg" class="concept__container--text--img01" loading="lazy">
-                <p>キットパス×ゴッコは、</p>
+                <p>キットパス×ゴッコは、</p>
             </div>
             <p class="mb10">米油などを原材料にした肌にやさしいインクと</p>
             <div class="concept__container--text">
@@ -333,7 +334,7 @@
                         <h2>features</h2>
                     </div>
                     <div class="features__heading">
-                        <h3>肌にやさしく、<br class="show_sp">楽しさ広がる<br>キットパス×ゴッコ</h3>
+                        <h3>肌にやさしく、<br class="show_sp">楽しさ広がる<br>キットパス×ゴッコ</h3>
                         <img src="assets/images/features/features_star.svg" alt="星のあしらい" class="features__heading--star" loading="lazy">
                     </div>
                     <div class="features__container">
@@ -356,7 +357,7 @@
                             <div class="features__container--contents--text">
                                 <span>2</span>
                                 <h4>肌に、ガラスに、布地にアート。</h4>
-                                <p>キットパス×ゴッコは、ボディペイントの他にも楽しみ方はいろいろあります。例えば、窓ガラスや鏡に星や雪のデザインをプリントしてにぎやかに演出したり、バッグやTシャツなどの布地や紙へもプリントできます。</p>
+                                <p>キットパス×ゴッコは、ボディペイントの他にも楽しみ方はいろいろあります。例えば、窓ガラスや鏡に星や雪のデザインをプリントしてにぎやかに演出したり、バッグやTシャツなどの布地や紙へもプリントできます。</p>
                             </div>
                             <div class="features__container--contents--photo-right">
                                 <img src="assets/images/features/features_photo02.png" alt="アクリルボードに星のデザインをプリントする様子" class="features__container--contents--photo-right--img02 katakata" loading="lazy">
@@ -379,7 +380,7 @@
                             <div class="features__container--contents--text">
                                 <span>3</span>
                                 <h4>プリントは水でかんたんに消える。</h4>
-                                <p>水で拭きとるだけでかんたんに消せるのもキットパス×ゴッコの特徴の一つ。顔やからだ、ガラスにプリントしたものは水拭きで落とせます。汚れを気にせず、自由な発想で遊んでいただけます。</p>
+                                <p>水で拭きとるだけでかんたんに消せるのもキットパス×ゴッコの特徴の一つ。顔やからだ、ガラスにプリントしたものは水拭きで落とせます。汚れを気にせず、自由な発想で遊んでいただけます。</p>
                             </div>
                         </div>
                     </div>
@@ -528,7 +529,7 @@
 
                         <div class="shopping__container--detail">
                             <img src="assets/images/logo.svg" alt="kitpas×GOCCOのロゴ" class="shopping__logo">
-                            <p class="shopping__container--detail--text">キットパス×ゴッコはインクとデザイン付き専用スクリーンがセットになった手軽にアートを楽しめるプリントキットです。</p>
+                            <p class="shopping__container--detail--text">キットパス×ゴッコはインクとデザイン付き専用スクリーンがセットになった手軽にアートを楽しめるプリントキットです。</p>
                             <div class="shopping__container--detail--price">
                                 <div>
                                     <span class="shopping__container--detail--price--yen-mark">¥</span>
@@ -594,7 +595,7 @@
                         </button>
                     </div>
                     <div class="shopping__other-services">
-                        <h5>もっとキットパス×ゴッコ<br class="show_sp">を楽しむなら！</h5>
+                        <h5>もっとキットパス×ゴッコ<br class="show_sp">を楽しむなら！</h5>
                         <div class="shopping__other-services--banner">
                             <a href="https://store.shopping.yahoo.co.jp/riso-screen/a5ada5c3a5.html" target="_blank" class="shopping__other-services--banner--bnr01">
                                 <img class="show_pc" src="assets/images/shopping/banner_img01.png" alt="消耗品はこちら" loading="lazy">
@@ -639,7 +640,7 @@
             <img src="assets/images/heading_bg-img.svg"  alt="インク風の見出し背景" class="shopping__logo" loading="lazy">
             <h2>scenes</h2>
         </div>
-        <h3>いろいろなシーンで<br>キットパス×ゴッコ</h3>
+        <h3>いろいろなシーンで<br>キットパス×ゴッコ</h3>
 
         <div class="scenes__container">
             <div class="scenes__container--item">
@@ -682,14 +683,14 @@
             <img src="assets/images/heading_bg-img.svg"  alt="インク風の見出し背景" class="shopping__logo" loading="lazy">
             <h2>voices</h2>
         </div>
-        <h3>キットパス×ゴッコ<br>はじめて使ってみました</h3>
+        <h3>キットパス×ゴッコ<br>はじめて使ってみました</h3>
 
         <div class="voices__container">
             <div class="voices__container--card">
                 <!-- 表面のコンテンツ -->
                 <div class="voices__container--card--front">
-                    <img src="assets/images/voices/voices_img01.png" alt="キットパスゴッコを体験する親子の写真" class="show_pc" loading="lazy">
-                    <img src="assets/images/voices/voices_img01_sp.png" alt="キットパスゴッコを体験する親子の写真" class="show_sp"  loading="lazy">
+                    <img src="assets/images/voices/voices_img01.png" alt="キットパスゴッコを体験する親子の写真" class="show_pc" loading="lazy">
+                    <img src="assets/images/voices/voices_img01_sp.png" alt="キットパスゴッコを体験する親子の写真" class="show_sp"  loading="lazy">
                     <img src="assets/images/voices/tap-icon.svg" alt="タップアイコン" class="tap-icon show_sp"  loading="lazy">
                 </div>
                 <!-- 裏面のコンテンツ -->
@@ -711,8 +712,8 @@
                 <div class="voices__container--card">
                     <!-- 表面のコンテンツ -->
                     <div class="voices__container--card--front">
-                        <img src="assets/images/voices/voices_img04.png" alt="キットパスゴッコを体験する親子の写真" class="show_pc" loading="lazy">
-                        <img src="assets/images/voices/voices_img04_sp.png" alt="キットパスゴッコを体験する親子の写真" class="show_sp"  loading="lazy">
+                        <img src="assets/images/voices/voices_img04.png" alt="キットパスゴッコを体験する親子の写真" class="show_pc" loading="lazy">
+                        <img src="assets/images/voices/voices_img04_sp.png" alt="キットパスゴッコを体験する親子の写真" class="show_sp"  loading="lazy">
                         <img src="assets/images/voices/tap-icon.svg" alt="タップアイコン" class="tap-icon show_sp"  loading="lazy">
                     </div>
                     <!-- 裏面のコンテンツ -->
@@ -734,8 +735,8 @@
             <div class="voices__container--card">
                 <!-- 表面のコンテンツ -->
                 <div class="voices__container--card--front">
-                    <img src="assets/images/voices/voices_img03.png" alt="キットパスゴッコを体験する親子の写真" class="show_pc"/>
-                    <img src="assets/images/voices/voices_img03_sp.png" alt="キットパスゴッコを体験する親子の写真" class="show_sp"/>
+                    <img src="assets/images/voices/voices_img03.png" alt="キットパスゴッコを体験する親子の写真" class="show_pc"/>
+                    <img src="assets/images/voices/voices_img03_sp.png" alt="キットパスゴッコを体験する親子の写真" class="show_sp"/>
                     <img src="assets/images/voices/tap-icon.svg" alt="タップアイコン" class="tap-icon show_sp"  loading="lazy">
                 </div>
                 <!-- 裏面のコンテンツ -->
@@ -757,8 +758,8 @@
                 <div class="voices__container--card">
                     <!-- 表面のコンテンツ -->
                     <div class="voices__container--card--front">
-                        <img src="assets/images/voices/voices_img02.png" alt="キットパスゴッコを体験する親子の写真" class="show_pc"/>
-                        <img src="assets/images/voices/voices_img02_sp.png" alt="キットパスゴッコを体験する親子の写真" class="show_sp"/>
+                        <img src="assets/images/voices/voices_img02.png" alt="キットパスゴッコを体験する親子の写真" class="show_pc"/>
+                        <img src="assets/images/voices/voices_img02_sp.png" alt="キットパスゴッコを体験する親子の写真" class="show_sp"/>
                         <img src="assets/images/voices/tap-icon.svg" alt="タップアイコン" class="tap-icon show_sp"  loading="lazy">
                     </div>
                     <!-- 裏面のコンテンツ -->
@@ -780,8 +781,8 @@
             <div class="voices__container--card hidden-view">
                 <!-- 表面のコンテンツ -->
                 <div class="voices__container--card--front">
-                    <img src="assets/images/voices/voices_img05.png" alt="キットパスゴッコを体験する親子の写真" class="show_pc"/>
-                    <img src="assets/images/voices/voices_img05_sp.png" alt="キットパスゴッコを体験する親子の写真" class="show_sp"/>
+                    <img src="assets/images/voices/voices_img05.png" alt="キットパスゴッコを体験する親子の写真" class="show_pc"/>
+                    <img src="assets/images/voices/voices_img05_sp.png" alt="キットパスゴッコを体験する親子の写真" class="show_sp"/>
                     <img src="assets/images/voices/tap-icon.svg" alt="タップアイコン" class="tap-icon show_sp"  loading="lazy">
                 </div>
                 <!-- 裏面のコンテンツ -->
@@ -802,8 +803,8 @@
             <div class="voices__container--card hidden-view">
                 <!-- 表面のコンテンツ -->
                 <div class="voices__container--card--front">
-                    <img src="assets/images/voices/voices_img06.png" alt="キットパスゴッコを体験する親子の写真" class="show_pc" loading="lazy">
-                    <img src="assets/images/voices/voices_img06_sp.png" alt="キットパスゴッコを体験する親子の写真" class="show_sp" loading="lazy">
+                    <img src="assets/images/voices/voices_img06.png" alt="キットパスゴッコを体験する親子の写真" class="show_pc" loading="lazy">
+                    <img src="assets/images/voices/voices_img06_sp.png" alt="キットパスゴッコを体験する親子の写真" class="show_sp" loading="lazy">
                     <img src="assets/images/voices/tap-icon.svg" alt="タップアイコン" class="tap-icon show_sp"  loading="lazy">
                 </div>
                 <!-- 裏面のコンテンツ -->
@@ -824,8 +825,8 @@
             <div class="voices__container--card hidden-view">
                 <!-- 表面のコンテンツ -->
                 <div class="voices__container--card--front">
-                    <img src="assets/images/voices/voices_img07.png" alt="キットパスゴッコを体験する親子の写真" class="show_pc" loading="lazy">
-                    <img src="assets/images/voices/voices_img07_sp.png" alt="キットパスゴッコを体験する親子の写真" class="show_sp" loading="lazy">
+                    <img src="assets/images/voices/voices_img07.png" alt="キットパスゴッコを体験する親子の写真" class="show_pc" loading="lazy">
+                    <img src="assets/images/voices/voices_img07_sp.png" alt="キットパスゴッコを体験する親子の写真" class="show_sp" loading="lazy">
                     <img src="assets/images/voices/tap-icon.svg" alt="タップアイコン" class="tap-icon show_sp"  loading="lazy">
                 </div>
                 <!-- 裏面のコンテンツ -->
@@ -846,8 +847,8 @@
             <div class="voices__container--card hidden-view">
                 <!-- 表面のコンテンツ -->
                 <div class="voices__container--card--front">
-                    <img src="assets/images/voices/voices_img08.png" alt="キットパスゴッコを体験する親子の写真" class="show_pc" loading="lazy">
-                    <img src="assets/images/voices/voices_img08_sp.png" alt="キットパスゴッコを体験する親子の写真" class="show_sp"  loading="lazy">
+                    <img src="assets/images/voices/voices_img08.png" alt="キットパスゴッコを体験する親子の写真" class="show_pc" loading="lazy">
+                    <img src="assets/images/voices/voices_img08_sp.png" alt="キットパスゴッコを体験する親子の写真" class="show_sp"  loading="lazy">
                     <img src="assets/images/voices/tap-icon.svg" alt="タップアイコン" class="tap-icon show_sp"  loading="lazy">
                 </div>
                 <!-- 裏面のコンテンツ -->
@@ -868,8 +869,8 @@
             <div class="voices__container--card hidden-view">
                 <!-- 表面のコンテンツ -->
                 <div class="voices__container--card--front">
-                    <img src="assets/images/voices/voices_img09.png" alt="キットパスゴッコを体験する親子の写真" class="show_pc" loading="lazy">
-                    <img src="assets/images/voices/voices_img09_sp.png" alt="キットパスゴッコを体験する親子の写真" class="show_sp"  loading="lazy">
+                    <img src="assets/images/voices/voices_img09.png" alt="キットパスゴッコを体験する親子の写真" class="show_pc" loading="lazy">
+                    <img src="assets/images/voices/voices_img09_sp.png" alt="キットパスゴッコを体験する親子の写真" class="show_sp"  loading="lazy">
                     <img src="assets/images/voices/tap-icon.svg" alt="タップアイコン" class="tap-icon show_sp"  loading="lazy">
                 </div>
                 <!-- 裏面のコンテンツ -->
@@ -958,7 +959,7 @@
     <!--links-->
     <section class="section wrapper">
 
-        <!-- <div class="links">
+        <div class="links">
             <div class="links__arch">
                 <svg xmlns="http://www.w3.org/2000/svg" width="288" height="84" viewBox="0 0 288 84" fill="none">
                     <path id="circle"  d="M288 84L1.4687e-05 84C6.57561e-06 37.6081 64.471 -1.12725e-05 144 -2.51778e-05C223.529 -3.90831e-05 288 37.608 288 84Z" fill="none"/>
@@ -979,10 +980,10 @@
                     <img src="assets/images/links/printgocco_banner.jpg" alt="プリントゴッコ懐かしい展へのリンクバナー" loading="lazy">
                 </a>
             </div>
-        </div> -->
+        </div>
 
         <div class="links-company">
-            <p>キットパス×ゴッコは、障がい者雇用に積極的に取り組み、人に環境にやさしい製品づくりを行う「キットパス」の開発メーカー<br class="show_pc">日本理化学工業と、スクリーン製版製品を開発・販売する理想科学工業が共同で開発した製品です。</p>
+            <p>キットパス×ゴッコは、障がい者雇用に積極的に取り組み、人に環境にやさしい製品づくりを行う「キットパス」の開発メーカー<br class="show_pc">日本理化学工業と、スクリーン製版製品を開発・販売する理想科学工業が共同で開発した製品です。</p>
 
             <div class="links-company__container">
                 <div class="links-company__container--item">
@@ -1055,7 +1056,7 @@
                     </a>
                 </div>
                 <div class="share__btn--share--sns--icon sink">
-                    <a href="https://twitter.com/intent/tweet?url=https://www.riso.co.jp/learn/risoart/lp/kitpasgocco/index.php&text=キットパスゴッコで遊ぼう！" data-url="https://www.riso.co.jp/learn/risoart/lp/kitpasgocco/index.php" data-via="risokagaku_ssp" data-hashtags="kitpasgocco" data-show-count="false" data-text="キットパスゴッコで遊ぼう!" data-lang="ja" target="_blank">
+                    <a href="https://twitter.com/intent/tweet?url=https://www.riso.co.jp/learn/risoart/lp/kitpasgocco/index.php&text=キットパスゴッコで遊ぼう！" data-url="https://www.riso.co.jp/learn/risoart/lp/kitpasgocco/index.php" data-via="risokagaku_ssp" data-hashtags="kitpasgocco" data-show-count="false" data-text="キットパスゴッコで遊ぼう!" data-lang="ja" target="_blank">
                         <img src="assets/images/footer/x_beige.svg" alt="Xのアイコン" loading="lazy">
                     </a>
                 </div>
